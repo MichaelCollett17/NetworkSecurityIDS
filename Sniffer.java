@@ -16,15 +16,15 @@ public class Sniffer {
         System.out.println("Packet: "+Packet+" with capacity: "+Packet.capacity());
         System.out.println(driver.byteArrayToString(packet));
 
-				//Figure Ethertype
-				if(packet[12] == 8 && packet[13] ==0){
-					System.out.println("IP");
+				Ethernet ethernet = new Ethernet(packet);
+				System.out.println(ethernet.toString());
+				String ethertype = ethernet.resolveEthertype();
+				if(ethertype == "IP"){
+					//do IP here
+				} else if(ethertype == "ARP"){
+					//do ARP here
+				} else{
+					System.out.println("Unimplemented type");
 				}
-				else if(packet[12] == 8 && packet[13] ==6){
-					System.out.println("ARP");
-				}
-				else{
-					System.our.println("EtherType not implemented yet");
-				}
-}
+			}
 }
