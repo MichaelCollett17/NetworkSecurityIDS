@@ -54,7 +54,6 @@ public class Ethernet {
 	public String toString() {
 		try {
 			String src = bytesToHex(sourceMac);
-
 			String dest = bytesToHex(destinationMac);
 			String eth = bytesToHex(ethertype);
 			String output = "Ethernet:\n" + "Destination address in bytes: " + dest + "\nSource Address in bytes: "

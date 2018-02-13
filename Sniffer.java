@@ -20,7 +20,7 @@ public class Sniffer {
 				System.out.println(ethernet.toString());
 				String ethertype = ethernet.resolveEthertype();
 				if(ethertype == "IP"){
-					//do IP here
+					IPPacket ip = new IPPacket(packet);
 				} else if(ethertype == "ARP"){
 					//do ARP here
 				} else{

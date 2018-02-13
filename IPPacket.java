@@ -1,227 +1,256 @@
 import java.net.InetAddress;
+import java.util.Arrays;
+import java.nio.ByteBuffer;
+import java.math.BigInteger;
 
 public class IPPacket extends Ethernet {
-  private byte[] packet;
-  private int version;// 4 bits
-  private int IHL;// 4 bits
-  private int TOS;//1 byte
-  private int length;//2 bytes
-  private int identification;//2 byte
-  private boolean DFflag;//1 not frag, 0 frag ok
-  private boolean MFflag;//1 more frags, 0 last frag
-  private int TTL;//1 bytes
-  private int protocol;//1 byte
-  private int checksum;//2 bytes
-  private InetAddress sourceAddress;//4 bytes
-  private InetAddress destAddress;//4 bytes
-  private byte[] options;
+  private byte[] ip_packet;
+  private int ip_version;// 4 bits
+  private int ip_IHL;// 4 bits
+  private int ip_TOS;//1 byte
+  private int ip_length;//2 bytes
+  private int ip_identification;//2 byte
+  private boolean ip_DFflag;//1 not frag, 0 frag ok
+  private boolean ip_MFflag;//1 more frags, 0 last frag
+  private int ip_TTL;//1 bytes
+  private int ip_protocol;//1 byte
+  private int ip_checksum;//2 bytes
+  private InetAddress ip_sourceAddress;//4 bytes
+  private InetAddress ip_destAddress;//4 bytes
+  private byte[] ip_options;
 
-
-  public void setPacket(byte[] p){
-    packet = p;
+  public IPPacket(byte[] packet) {
+    super(packet);
+    this.ip_packet = Arrays.copyOfRange(packet,14,packet.length);
+    byte versionAndIHL = ip_packet[0];
+    ip_version =  (int)(versionAndIHL >> 4);
+    ip_IHL = (int)(versionAndIHL & 15);
+    ip_TOS = (int) ip_packet[1];
+    ip_length = (new BigInteger(Arrays.copyOfRange(ip_packet, 2, 4)).intValue());
+    ip_identification = (new BigInteger(Arrays.copyOfRange(ip_packet, 4, 6)).intValue());
+    if(((int)(ip_packet[6] >> 6)) == 1){
+      ip_DFflag = true;
+    }
+    else{
+      ip_DFflag = false;
+    }
+    System.out.println(bytesToHex(ip_packet));
+    System.out.println(ip_version + "\n" + ip_IHL + "\n" + ip_TOS + "\n"
+      + ip_length +"\n" + ip_identification + "\n" + ip_DFflag);
   }
 
-  public byte[] getPacket(){
-    return packet;
+  public void setip_packet(byte[] p){
+    ip_packet = p;
+  }
+
+  public byte[] getip_packet(){
+    return ip_packet;
   }
 
   public void setOptions(byte[] o){
-    options = o;
+    ip_options = o;
   }
 
   public byte[] getOptions(){
-    return options;
+    return ip_options;
   }
 
-	/**
-	* Returns value of version
-	* @return
-	*/
-	public int getVersion() {
-		return version;
+	public int getIp_version() {
+		return ip_version;
 	}
 
 	/**
-	* Sets new value of version
+	* Sets new value of ip_version
 	* @param
 	*/
-	public void setVersion(int version) {
-		this.version = version;
+	public void setIp_version(int ip_version) {
+		this.ip_version = ip_version;
 	}
 
 	/**
-	* Returns value of IHL
+	* Returns value of ip_IHL
 	* @return
 	*/
-	public int getIHL() {
-		return IHL;
+	public int getIp_IHL() {
+		return ip_IHL;
 	}
 
 	/**
-	* Sets new value of IHL
+	* Sets new value of ip_IHL
 	* @param
 	*/
-	public void setIHL(int IHL) {
-		this.IHL = IHL;
+	public void setIp_IHL(int ip_IHL) {
+		this.ip_IHL = ip_IHL;
 	}
 
 	/**
-	* Returns value of TOS
+	* Returns value of ip_TOS
 	* @return
 	*/
-	public int getTOS() {
-		return TOS;
+	public int getIp_TOS() {
+		return ip_TOS;
 	}
 
 	/**
-	* Sets new value of TOS
+	* Sets new value of ip_TOS
 	* @param
 	*/
-	public void setTOS(int TOS) {
-		this.TOS = TOS;
+	public void setIp_TOS(int ip_TOS) {
+		this.ip_TOS = ip_TOS;
 	}
 
 	/**
-	* Returns value of length
+	* Returns value of ip_length
 	* @return
 	*/
-	public int getLength() {
-		return length;
+	public int getIp_length() {
+		return ip_length;
 	}
 
 	/**
-	* Sets new value of length
+	* Sets new value of ip_length
 	* @param
 	*/
-	public void setLength(int length) {
-		this.length = length;
+	public void setIp_length(int ip_length) {
+		this.ip_length = ip_length;
 	}
 
 	/**
-	* Returns value of identification
+	* Returns value of ip_identification
 	* @return
 	*/
-	public int getIdentification() {
-		return identification;
+	public int getIp_identification() {
+		return ip_identification;
 	}
 
 	/**
-	* Sets new value of identification
+	* Sets new value of ip_identification
 	* @param
 	*/
-	public void setIdentification(int identification) {
-		this.identification = identification;
+	public void setIp_identification(int ip_identification) {
+		this.ip_identification = ip_identification;
 	}
 
 	/**
-	* Returns value of DFflag
+	* Returns value of ip_DFflag
 	* @return
 	*/
-	public boolean isDFflag() {
-		return DFflag;
+	public boolean isIp_DFflag() {
+		return ip_DFflag;
 	}
 
 	/**
-	* Sets new value of DFflag
+	* Sets new value of ip_DFflag
 	* @param
 	*/
-	public void setDFflag(boolean DFflag) {
-		this.DFflag = DFflag;
+	public void setIp_DFflag(boolean ip_DFflag) {
+		this.ip_DFflag = ip_DFflag;
 	}
 
 	/**
-	* Returns value of MFflag
+	* Returns value of ip_MFflag
 	* @return
 	*/
-	public boolean isMFflag() {
-		return MFflag;
+	public boolean isIp_MFflag() {
+		return ip_MFflag;
 	}
 
 	/**
-	* Sets new value of MFflag
+	* Sets new value of ip_MFflag
 	* @param
 	*/
-	public void setMFflag(boolean MFflag) {
-		this.MFflag = MFflag;
+	public void setIp_MFflag(boolean ip_MFflag) {
+		this.ip_MFflag = ip_MFflag;
 	}
 
 	/**
-	* Returns value of TTL
+	* Returns value of ip_TTL
 	* @return
 	*/
-	public int getTTL() {
-		return TTL;
+	public int getIp_TTL() {
+		return ip_TTL;
 	}
 
 	/**
-	* Sets new value of TTL
+	* Sets new value of ip_TTL
 	* @param
 	*/
-	public void setTTL(int TTL) {
-		this.TTL = TTL;
+	public void setIp_TTL(int ip_TTL) {
+		this.ip_TTL = ip_TTL;
 	}
 
 	/**
-	* Returns value of protocol
+	* Returns value of ip_protocol
 	* @return
 	*/
-	public int getProtocol() {
-		return protocol;
+	public int getIp_protocol() {
+		return ip_protocol;
 	}
 
 	/**
-	* Sets new value of protocol
+	* Sets new value of ip_protocol
 	* @param
 	*/
-	public void setProtocol(int protocol) {
-		this.protocol = protocol;
+	public void setIp_protocol(int ip_protocol) {
+		this.ip_protocol = ip_protocol;
 	}
 
 	/**
-	* Returns value of checksum
+	* Returns value of ip_checksum
 	* @return
 	*/
-	public int getChecksum() {
-		return checksum;
+	public int getIp_checksum() {
+		return ip_checksum;
 	}
 
 	/**
-	* Sets new value of checksum
+	* Sets new value of ip_checksum
 	* @param
 	*/
-	public void setChecksum(int checksum) {
-		this.checksum = checksum;
+	public void setIp_checksum(int ip_checksum) {
+		this.ip_checksum = ip_checksum;
 	}
 
 	/**
-	* Returns value of sourceAddress
+	* Returns value of ip_sourceAddress
 	* @return
 	*/
-	public InetAddress getSourceAddress() {
-		return sourceAddress;
+	public InetAddress getIp_sourceAddress() {
+		return ip_sourceAddress;
 	}
 
 	/**
-	* Sets new value of sourceAddress
+	* Sets new value of ip_sourceAddress
 	* @param
 	*/
-	public void setSourceAddress(InetAddress sourceAddress) {
-		this.sourceAddress = sourceAddress;
+	public void setIp_sourceAddress(InetAddress ip_sourceAddress) {
+		this.ip_sourceAddress = ip_sourceAddress;
 	}
 
 	/**
-	* Returns value of destAddress
+	* Returns value of ip_destAddress
 	* @return
 	*/
-	public InetAddress getDestAddress() {
-		return destAddress;
+	public InetAddress getIp_destAddress() {
+		return ip_destAddress;
 	}
 
 	/**
-	* Sets new value of destAddress
+	* Sets new value of ip_destAddress
 	* @param
 	*/
-	public void setDestAddress(InetAddress destAddress) {
-		this.destAddress = destAddress;
+	public void setIp_destAddress(InetAddress ip_destAddress) {
+		this.ip_destAddress = ip_destAddress;
 	}
+
+  public static String bytesToHex(byte[] bytes) {
+    char[] hexArray = "0123456789ABCDEF".toCharArray();
+    char[] hexChars = new char[bytes.length * 2];
+    for ( int j = 0; j < bytes.length; j++ ) {
+        int v = bytes[j] & 0xFF;
+        hexChars[j * 2] = hexArray[v >>> 4];
+        hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+    }
+    return new String(hexChars);
+  }
 }
