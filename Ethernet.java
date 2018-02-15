@@ -38,7 +38,6 @@ public class Ethernet {
 		return ethertype;
 	}
 
-	// TO BE IMPLEMENTED
 	public String resolveEthertype() {
 		String etype = "";
 		if (ethertype[0] == 8 && ethertype[1] == 0) {
@@ -57,7 +56,7 @@ public class Ethernet {
 			String dest = bytesToHex(destinationMac);
 			String eth = bytesToHex(ethertype);
 			String output = "Ethernet:\n" + "Destination address in bytes: " + dest + "\nSource Address in bytes: "
-					+ src + "\n Ethertype: " + resolveEthertype();
+					+ src + "\nEthertype: " + resolveEthertype();
 			return output;
 		} catch (Exception e) {
 			e.printStackTrace();

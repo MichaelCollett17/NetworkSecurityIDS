@@ -21,6 +21,7 @@ public class Sniffer {
 				String ethertype = ethernet.resolveEthertype();
 				if(ethertype == "IP"){
 					IPPacket ip = new IPPacket(packet);
+					System.out.println(ip.toString());
 				} else if(ethertype == "ARP"){
 					//do ARP here
 				} else{
