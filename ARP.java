@@ -1,4 +1,10 @@
-public class ARP {
+import java.net.InetAddress;
+import java.util.Arrays;
+import java.nio.ByteBuffer;
+import java.math.BigInteger;
+
+public class ARP extends Ethernet {
+  private byte[] arp_packet;
   private int arp_hardwareType;//2
   private int arp_protocolType;//2
   private int arp_hardwareAddressLength;//1
@@ -10,7 +16,27 @@ public class ARP {
   private InetAddress arp_targetProtocolAddress;//4
 
   public ARP(byte[] packet){
-    
+    super(packet);
+    this.arp_packet = Arrays.copyOfRange(packet, 14, packet.length);
+    setArp_hardwareType(new BigInteger(Arrays.copyOfRange(arp_packet, 0, 2)).intValue());
+    setArp_protocolType(new BigInteger(Arrays.copyOfRange(arp_packet, 2, 4)).intValue());
+    setArp_hardwareAddressLength(byteToUnsignedInt(arp_packet[4]));
+    setArp_protocolAddressLength(byteToUnsignedInt(arp_packet[5]));
+
+    try{
+      int pointer = 8;
+      setArp_operation(new BigInteger(Arrays.copyOfRange(arp_packet, 6, 8)).intValue());
+      setArp_sendHardAddress(Arrays.copyOfRange(arp_packet, pointer, (pointer + arp_hardwareAddressLength)));
+      pointer += arp_hardwareAddressLength;
+      setArp_senderProtocolAddress(InetAddress.getByAddress(Arrays.copyOfRange(arp_packet, pointer, pointer + arp_protocolAddressLength)));
+      pointer += arp_protocolAddressLength;
+      setArp_targetHardAddress(Arrays.copyOfRange(arp_packet, pointer, (pointer + arp_hardwareAddressLength)));
+      pointer += arp_hardwareAddressLength;
+      setArp_targetProtocolAddress(InetAddress.getByAddress(Arrays.copyOfRange(arp_packet, pointer, pointer + arp_protocolAddressLength)));
+    } catch(Exception e){
+      e.printStackTrace();
+      System.out.println("Error parsing addresses");
+    }
   }
 
 	public int getArp_hardwareType() {
@@ -18,7 +44,10 @@ public class ARP {
 	}
 
 	public void setArp_hardwareType(int arp_hardwareType) {
-		this.arp_hardwareType = arp_hardwareType;
+    if(arp_hardwareType >= 0)
+		  this.arp_hardwareType = arp_hardwareType;
+    else
+      this.arp_hardwareType = arp_hardwareType * -1;
 	}
 
 	public int getArp_protocolType() {
@@ -26,7 +55,10 @@ public class ARP {
 	}
 
 	public void setArp_protocolType(int arp_protocolType) {
-		this.arp_protocolType = arp_protocolType;
+    if(arp_protocolType >= 0)
+		  this.arp_protocolType = arp_protocolType;
+    else
+      this.arp_protocolType = arp_protocolType * -1;
 	}
 
 	public int getArp_hardwareAddressLength() {
@@ -50,7 +82,10 @@ public class ARP {
 	}
 
 	public void setArp_operation(int arp_operation) {
-		this.arp_operation = arp_operation;
+    if(arp_operation >= 0)
+		  this.arp_operation = arp_operation;
+    else
+      this.arp_operation = arp_operation * -1;
 	}
 
   public byte[] getArp_sendHardAddress(){
@@ -86,7 +121,13 @@ public class ARP {
 	}
 
   public String toString(){
-
+    return "Hardware Type: " + this.getArp_hardwareType() + "\nProtocol Type: "
+      + getArp_protocolType() + "\nHardware Address Length: " + getArp_hardwareAddressLength()
+      + "\nProtocol Address Length: " + getArp_protocolAddressLength() + "\nOperation: "
+      + getArp_operation() + "\nSender Harware Address: " + bytesToHex(getArp_sendHardAddress())
+      + "\nSender Protocol Address: " + getArp_senderProtocolAddress().toString() +
+      "\nTarget Hardware Address: " + bytesToHex(getArp_targetHardAddress()) + "\nTarget Protocol Address: "
+      + getArp_targetProtocolAddress().toString();
   }
 
   public static String bytesToHex(byte[] bytes) {
@@ -98,6 +139,10 @@ public class ARP {
         hexChars[j * 2 + 1] = hexArray[v & 0x0F];
     }
     return new String(hexChars);
+  }
+
+  public static int byteToUnsignedInt(byte b) {
+    return 0x00 << 24 | b & 0xff;
   }
 
 }
