@@ -51,7 +51,7 @@ public class IPPacket extends Ethernet {
     } catch (Exception e){
       e.printStackTrace();
     }
-    setOptions(Arrays.copyOfRange(ip_packet, 20, ip_packet.length));
+    setOptions(Arrays.copyOfRange(ip_packet, 20, (getIp_IHL()*4)));
   }
 
   public void setip_packet(byte[] p){

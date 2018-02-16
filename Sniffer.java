@@ -4,8 +4,8 @@ public class Sniffer {
 
 	public static void main(String[] args) {
         SimplePacketDriver driver=new SimplePacketDriver();
-				boolean arp = false;
-				while(!arp){
+				boolean icmpYet = false;
+				while(!icmpYet){
 					String[] adapters=driver.getAdapterNames();
 		//Open first found adapter (usually first Ethernet card found)
 		//Recieving ethernet packets becuase it's the lowest level of software
@@ -24,9 +24,14 @@ public class Sniffer {
 					if(ethertype == "IP"){
 						IPPacket ip = new IPPacket(packet);
 						System.out.println(ip.toString());
+						String iptype = ip.resolveIPProtocol();
+						if(iptype == "ICMP"){
+							ICMP icmp = new ICMP(packet);
+							icmpYet = true;
+							System.out.println(icmp.toString());
+						}
 					} else if(ethertype == "ARP"){
 						ARP a = new ARP(packet);
-						arp = true;
 					} else{
 						System.out.println("Unimplemented type");
 					}
