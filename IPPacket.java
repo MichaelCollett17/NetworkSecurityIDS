@@ -310,6 +310,7 @@ public class IPPacket extends Ethernet {
     }
     return new String(hexChars);
   }
+  
   public static int byteToUnsignedInt(byte b) {
     return 0x00 << 24 | b & 0xff;
   }
