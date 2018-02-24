@@ -279,11 +279,11 @@ public class IPPacket extends Ethernet {
     String protocol = "";
     //most common to least common udp = 17, tcp = 6, icmp =1
     if(getIp_protocol() == 17)
-      protocol = "UDP";
+      protocol = "udp";
     else if(getIp_protocol() == 6)
-      protocol = "TCP";
+      protocol = "tcp";
     else if(getIp_protocol() == 1)
-      protocol = "ICMP";
+      protocol = "icmp";
     else
       protocol = "N/A";
     return protocol;
@@ -310,7 +310,7 @@ public class IPPacket extends Ethernet {
     }
     return new String(hexChars);
   }
-  
+
   public static int byteToUnsignedInt(byte b) {
     return 0x00 << 24 | b & 0xff;
   }

@@ -41,9 +41,9 @@ public class Ethernet {
 	public String resolveEthertype() {
 		String etype = "";
 		if (ethertype[0] == 8 && ethertype[1] == 0) {
-			etype = "IP";
+			etype = "ip";
 		} else if (ethertype[0] == 8 && ethertype[1] == 6) {
-			etype = "ARP";
+			etype = "arp";
 		} else {
 			etype = "N/A";
 		}

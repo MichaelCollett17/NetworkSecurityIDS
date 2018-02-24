@@ -21,23 +21,23 @@ public class Sniffer {
 					Ethernet ethernet = new Ethernet(packet);
 					System.out.println(ethernet.toString());
 					String ethertype = ethernet.resolveEthertype();
-					if(ethertype == "IP"){
+					if(ethertype == "ip"){
 						IPPacket ip = new IPPacket(packet);
 						System.out.println(ip.toString());
 						String iptype = ip.resolveIPProtocol();
-						if(iptype == "ICMP"){
+						if(iptype == "icmp"){
 							ICMP icmp = new ICMP(packet);
 							System.out.println(icmp.toString());
 						}
-						else if(iptype == "UDP"){
+						else if(iptype == "udp"){
 							UDP udp = new UDP(packet);
 							System.out.println(udp.toString());
 						}
-						else if(iptype == "TCP"){
+						else if(iptype == "tcp"){
 							TCP tcp = new TCP(packet);
 							udpYet = true;
 						}
-					} else if(ethertype == "ARP"){
+					} else if(ethertype == "arp"){
 						ARP a = new ARP(packet);
 					} else{
 						System.out.println("Unimplemented type");
