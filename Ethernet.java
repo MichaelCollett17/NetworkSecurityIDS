@@ -8,6 +8,7 @@ public class Ethernet {
 	private byte[] ethertype;
 
 	public Ethernet(byte[] packet_) {
+		System.out.println(bytesToHex(packet_));
 		this.packet = packet_;
 		setDestinationMac(Arrays.copyOfRange(packet_, 0, 6));
 		setSourceMac(Arrays.copyOfRange(packet_, 6, 12));
