@@ -25,7 +25,7 @@ public class NetworkSecurityOne {
 		InetAddress src = null;
 		boolean filterDst = false;
 		InetAddress dst = null;
-
+		boolean sord = false;
 
 		SimplePacketDriver driver=new SimplePacketDriver();
 
@@ -67,6 +67,47 @@ public class NetworkSecurityOne {
 					}
 					break;
 				case "-dst":
+					idx++;
+					filterDst = true;
+					try{
+						dst = InetAddress.getByName(args[idx]);
+						System.out.println(dst.toString());
+					} catch(Exception e){
+						e.printStackTrace();
+					}
+					break;
+				case "-sord":
+					sord = true;
+					//source
+					idx++;
+					filterSrc = true;
+					try{
+						src = InetAddress.getByName(args[idx]);
+						System.out.println(src.toString());
+					} catch(Exception e){
+						e.printStackTrace();
+					}
+					//destination
+					idx++;
+					filterDst = true;
+					try{
+						dst = InetAddress.getByName(args[idx]);
+						System.out.println(dst.toString());
+					} catch(Exception e){
+						e.printStackTrace();
+					}
+					break;
+				case "-sandd":
+					//source
+					idx++;
+					filterSrc = true;
+					try{
+						src = InetAddress.getByName(args[idx]);
+						System.out.println(src.toString());
+					} catch(Exception e){
+						e.printStackTrace();
+					}
+					//destination
 					idx++;
 					filterDst = true;
 					try{
@@ -118,10 +159,16 @@ public class NetworkSecurityOne {
 			if(ethertype == "ip"){
 				IPPacket ip = new IPPacket(packet);
 				String iptype = ip.resolveIPProtocol();
-				if((filterSrc && (!src.toString().equals(ip.getIp_sourceAddress().toString()))) ||
-							(filterDst && (!dst.toString().equals(ip.getIp_destAddress().toString())))){
+				if(!sord && ((filterSrc && (!src.toString().equals(ip.getIp_sourceAddress().toString()))) ||
+							(filterDst && (!dst.toString().equals(ip.getIp_destAddress().toString()))))){
 					packetNum++;
 					continue;
+				}	else if(sord){
+					if(((!src.toString().equals(ip.getIp_sourceAddress().toString()))) &&
+								(!dst.toString().equals(ip.getIp_destAddress().toString()))){
+						packetNum++;
+						continue;
+					}
 				}
 				if(filterType && filterVal.equals("ip")){
 					if(saveOutput){
@@ -158,10 +205,17 @@ public class NetworkSecurityOne {
 				}
 			} else if(ethertype == "arp"){
 				ARP a = new ARP(packet);
-				if((filterSrc && (!src.toString().equals(a.getArp_senderProtocolAddress().toString()))) ||
-				((filterDst && (!dst.toString().equals(a.getArp_targetProtocolAddress().toString()))))){
+				if(!sord && ((filterSrc && (!src.toString().equals(a.getArp_senderProtocolAddress().toString())))||
+				((filterDst && (!dst.toString().equals(a.getArp_targetProtocolAddress().toString())))))){
 					packetNum++;
 					continue;
+				}
+				else if(sord){
+					if((!src.toString().equals(a.getArp_senderProtocolAddress().toString())) &&
+					(!dst.toString().equals(a.getArp_targetProtocolAddress().toString()))){
+						packetNum++;
+						continue;
+					}
 				}
 				if((!filterType) || filterVal.equals("arp")){
 					System.out.println(a.toString());
