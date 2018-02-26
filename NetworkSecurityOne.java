@@ -26,6 +26,12 @@ public class NetworkSecurityOne {
 		boolean filterDst = false;
 		InetAddress dst = null;
 		boolean sord = false;
+		boolean filtSPort = false;
+		int sPortMin = -1;
+		int sPortMax = -1;
+		boolean filtDPort = false;
+		int dPortMin = -1;
+		int dPortMax = -1;
 
 		SimplePacketDriver driver=new SimplePacketDriver();
 
@@ -117,6 +123,20 @@ public class NetworkSecurityOne {
 						e.printStackTrace();
 					}
 					break;
+				case "-sport":
+					filtSPort = true;
+					idx++;
+					sPortMin = Integer.parseInt(args[idx]);
+					idx++;
+					sPortMax = Integer.parseInt(args[idx]);
+					break;
+				case "-dport":
+					filtDPort = true;
+					idx++;
+					dPortMin = Integer.parseInt(args[idx]);
+					idx++;
+					dPortMax = Integer.parseInt(args[idx]);
+					break;
     }
 	}
     if(!isFile){
@@ -187,6 +207,14 @@ public class NetworkSecurityOne {
 				}
 				else if(iptype == "udp"){
 					UDP udp = new UDP(packet);
+					if((filtSPort) && !((udp.getUdp_sourcePort() <= sPortMax) && (udp.getUdp_sourcePort() >= sPortMin))){
+						packetNum++;
+						continue;
+					}
+					if((filtDPort) && !((udp.getUdp_destinationPort() <= dPortMax) && (udp.getUdp_destinationPort() >= dPortMin))){
+						packetNum++;
+						continue;
+					}
 					if((!filterType) || filterVal.equals("udp")){
 						System.out.println(udp.toString());
 						if(saveOutput){
@@ -196,6 +224,14 @@ public class NetworkSecurityOne {
 				}
 				else if(iptype == "tcp"){
 					TCP tcp = new TCP(packet);
+					if((filtSPort) && !((tcp.getTcp_sourcePort() <= sPortMax) && (tcp.getTcp_sourcePort() >= sPortMin))){
+						packetNum++;
+						continue;
+					}
+					if((filtDPort) && !((tcp.getTcp_destinationPort() <= dPortMax) && (tcp.getTcp_destinationPort() >= dPortMin))){
+						packetNum++;
+						continue;
+					}
 					if((!filterType) || filterVal.equals("tcp")){
 						System.out.println(tcp.toString());
 						if(saveOutput){
