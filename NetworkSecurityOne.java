@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.util.Scanner;
 import java.io.FileInputStream;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 
 
 public class NetworkSecurityOne {
@@ -20,6 +21,9 @@ public class NetworkSecurityOne {
 		PrintWriter writer = null;
 		boolean filterType = false;
 		String filterVal = "";
+		boolean filterSrc = false;
+		InetAddress src = null;
+
 
 		SimplePacketDriver driver=new SimplePacketDriver();
 
@@ -49,6 +53,16 @@ public class NetworkSecurityOne {
 					idx++;
 					filterVal = args[idx];
 					filterType = true;
+					break;
+				case "-src":
+					idx++;
+					filterSrc = true;
+					try{
+						src = InetAddress.getByName(args[idx]);
+						System.out.println(src.toString());
+					} catch(Exception e){
+						e.printStackTrace();
+					}
 					break;
     }
 	}
@@ -92,6 +106,10 @@ public class NetworkSecurityOne {
 			if(ethertype == "ip"){
 				IPPacket ip = new IPPacket(packet);
 				String iptype = ip.resolveIPProtocol();
+				if(filterSrc && (!src.toString().equals(ip.getIp_sourceAddress().toString()))){
+					packetNum++;
+					continue;
+				}
 				if(filterType && filterVal.equals("ip")){
 					if(saveOutput){
 						writer.println(outputStringify(packet) + "\r\n");
@@ -127,6 +145,10 @@ public class NetworkSecurityOne {
 				}
 			} else if(ethertype == "arp"){
 				ARP a = new ARP(packet);
+				if(filterSrc && (!src.toString().equals(a.getArp_senderProtocolAddress().toString()))){
+					packetNum++;
+					continue;
+				}
 				if((!filterType) || filterVal.equals("arp")){
 					System.out.println(a.toString());
 					if(saveOutput){
@@ -134,10 +156,10 @@ public class NetworkSecurityOne {
 					}
 				}
 			} else{
-				System.out.println("Unimplemented type\n");
-				if(saveOutput){
-					writer.println(outputStringify(packet) + "\r\n");
-				}
+				System.out.println("Unimplemented type (not sure if you want this printed)\n");
+				//if(saveOutput){
+				//	writer.println(outputStringify(packet) + "\r\n");
+				//}
 			}
 			packetNum++;
 		}
