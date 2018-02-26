@@ -18,6 +18,8 @@ public class NetworkSecurityOne {
 		boolean saveOutput = false;
 		String outFileName = "";
 		PrintWriter writer = null;
+		boolean filterType = false;
+		String filterVal = "";
 
 		SimplePacketDriver driver=new SimplePacketDriver();
 
@@ -43,9 +45,13 @@ public class NetworkSecurityOne {
 						e.printStackTrace();
 					}
 					break;
+				case "-t":
+					idx++;
+					filterVal = args[idx];
+					filterType = true;
+					break;
     }
 	}
-
     if(!isFile){
   		String[] adapters=driver.getAdapterNames();
       if (driver.openAdapter(adapters[0])) System.out.println("Adapter is open: "+adapters[0]);
@@ -70,37 +76,68 @@ public class NetworkSecurityOne {
 					packet = packetReader(stgPacket);
 				}
 			}
-			ByteBuffer Packet = ByteBuffer.wrap(packet);
-			//Print packet summary
-			System.out.println("Packet: "+Packet+" with capacity: "+Packet.capacity());
-			String stringPack = (driver.byteArrayToString(packet) + "\r\n").toString();
+			//ByteBuffer Packet = ByteBuffer.wrap(packet);
+			//System.out.println("Packet: "+Packet+" with capacity: "+Packet.capacity());
+			String stringPack = driver.byteArrayToString(packet);
 			System.out.println(stringPack);
-			if(saveOutput){
-				writer.println(outputStringify(packet) + "\r\n");
-			}
 
 			Ethernet ethernet = new Ethernet(packet);
-			System.out.println(ethernet.toString());
+			if(filterType && filterVal.equals("eth")){
+				if(saveOutput){
+					writer.println(outputStringify(packet) + "\r\n");
+				}
+				System.out.println(ethernet.toString());
+			}
 			String ethertype = ethernet.resolveEthertype();
 			if(ethertype == "ip"){
 				IPPacket ip = new IPPacket(packet);
-				System.out.println(ip.toString());
 				String iptype = ip.resolveIPProtocol();
+				if(filterType && filterVal.equals("ip")){
+					if(saveOutput){
+						writer.println(outputStringify(packet) + "\r\n");
+					}
+					System.out.println(ip.toString());
+				}
 				if(iptype == "icmp"){
 					ICMP icmp = new ICMP(packet);
-					System.out.println(icmp.toString());
+					if((!filterType) || filterVal.equals("icmp")){
+						if(saveOutput){
+							writer.println(outputStringify(packet) + "\r\n");
+						}
+						System.out.println(icmp.toString());
+					}
 				}
 				else if(iptype == "udp"){
 					UDP udp = new UDP(packet);
-					System.out.println(udp.toString());
+					if((!filterType) || filterVal.equals("udp")){
+						System.out.println(udp.toString());
+						if(saveOutput){
+							writer.println(outputStringify(packet) + "\r\n");
+						}
+					}
 				}
 				else if(iptype == "tcp"){
 					TCP tcp = new TCP(packet);
+					if((!filterType) || filterVal.equals("tcp")){
+						System.out.println(tcp.toString());
+						if(saveOutput){
+							writer.println(outputStringify(packet) + "\r\n");
+						}
+					}
 				}
 			} else if(ethertype == "arp"){
 				ARP a = new ARP(packet);
+				if((!filterType) || filterVal.equals("arp")){
+					System.out.println(a.toString());
+					if(saveOutput){
+						writer.println(outputStringify(packet) + "\r\n");
+					}
+				}
 			} else{
-				System.out.println("Unimplemented type");
+				System.out.println("Unimplemented type\n");
+				if(saveOutput){
+					writer.println(outputStringify(packet) + "\r\n");
+				}
 			}
 			packetNum++;
 		}
@@ -121,7 +158,6 @@ public class NetworkSecurityOne {
 
 	public static byte[] packetReader(String s){
 		String st = s.replaceAll("\\s+","");
-		System.out.println(st);
 		return hexStringToByteArray(st);
 	}
 

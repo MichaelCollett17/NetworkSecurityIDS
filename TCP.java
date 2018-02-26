@@ -49,16 +49,6 @@ public class TCP extends IPPacket {
     int endHeader = 4 * getTcp_dataOffset();
     this.tcp_options = Arrays.copyOfRange(tcp_packet, 20, endHeader);
     this.tcp_data = Arrays.copyOfRange(tcp_packet, endHeader, tcp_packet.length);
-    System.out.println("TCP\nSource Port: " + getTcp_sourcePort() +
-    "\nDestination Port: " + getTcp_destinationPort() + "\nSequence Number: " +
-    getTcp_sequenceNumber() + "\nAck Number: " + getTcp_ackNumber() + "\nData Offset: "
-    + getTcp_dataOffset() + "\nReserved Bits (last 6 of byte): "
-    + String.format("%8s", Integer.toBinaryString(tcp_reserved & 0xFF)).replace(' ', '0')
-    + "\nUrg: " + isTcp_urg() + "\nAck: " + isTcp_ack()+ "\nPsh: " + isTcp_psh()
-    + "\nRst: " + isTcp_rst()+ "\nSyn: " + isTcp_syn() + "\nFin: " + isTcp_fin()
-    +"\nWindow Size: " + getTcp_window() + "\nChecksum: " + bytesToHex(tcp_checksum) +
-    "\nUrgent Pointer: " + getTcp_urgentPointer() + "\nOptions: " + bytesToHex(tcp_options)
-    + "\nData: " + bytesToHex(tcp_data));
   }
 
 	public int getTcp_sourcePort() {
@@ -174,5 +164,17 @@ public class TCP extends IPPacket {
         hexChars[j * 2 + 1] = hexArray[v & 0x0F];
     }
     return new String(hexChars);
+  }
+  public String toString(){
+    return super.toString() + "\nTCP\nSource Port: " + getTcp_sourcePort() +
+    "\nDestination Port: " + getTcp_destinationPort() + "\nSequence Number: " +
+    getTcp_sequenceNumber() + "\nAck Number: " + getTcp_ackNumber() + "\nData Offset: "
+    + getTcp_dataOffset() + "\nReserved Bits (last 6 of byte): "
+    + String.format("%8s", Integer.toBinaryString(tcp_reserved & 0xFF)).replace(' ', '0')
+    + "\nUrg: " + isTcp_urg() + "\nAck: " + isTcp_ack()+ "\nPsh: " + isTcp_psh()
+    + "\nRst: " + isTcp_rst()+ "\nSyn: " + isTcp_syn() + "\nFin: " + isTcp_fin()
+    +"\nWindow Size: " + getTcp_window() + "\nChecksum: " + bytesToHex(tcp_checksum) +
+    "\nUrgent Pointer: " + getTcp_urgentPointer() + "\nOptions: " + bytesToHex(tcp_options)
+    + "\nData: " + bytesToHex(tcp_data);
   }
 }

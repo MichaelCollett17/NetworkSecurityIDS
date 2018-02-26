@@ -121,7 +121,7 @@ public class ARP extends Ethernet {
 	}
 
   public String toString(){
-    return "Hardware Type: " + this.getArp_hardwareType() + "\nProtocol Type: "
+    return super.toString() + "\nHardware Type: " + this.getArp_hardwareType() + "\nProtocol Type: "
       + getArp_protocolType() + "\nHardware Address Length: " + getArp_hardwareAddressLength()
       + "\nProtocol Address Length: " + getArp_protocolAddressLength() + "\nOperation: "
       + getArp_operation() + "\nSender Harware Address: " + bytesToHex(getArp_sendHardAddress())

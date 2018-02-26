@@ -60,7 +60,7 @@ public class UDP extends IPPacket{
   }
 
   public String toString(){
-    return "UDP:\nSource Port: " + getUdp_sourcePort() +
+    return super.toString() + "\nUDP:\nSource Port: " + getUdp_sourcePort() +
       "\nDestination Port: " + getUdp_destinationPort() + "\nLength: " +
       getUdp_length() + "\nChecksum: " +bytesToHex(getUdp_checksum()) +
       "\nPayload: " + bytesToHex(udp_payload);

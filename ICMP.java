@@ -53,7 +53,7 @@ public class ICMP extends IPPacket{
   }
 
   public String toString(){
-    return "ICMP:\nType: " + getIcmp_type() + "\nCode: " +
+    return super.toString() + "\nICMP:\nType: " + getIcmp_type() + "\nCode: " +
         getIcmp_code() + "\nChecksum: " + bytesToHex(getIcmp_checksum()) +
         "\nPayload: " + bytesToHex(getIcmp_payload());
   }

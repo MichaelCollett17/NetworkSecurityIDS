@@ -290,7 +290,7 @@ public class IPPacket extends Ethernet {
   }
 
   public String toString(){
-    return "IP:\nVersion: " + getIp_version() + "\nIHL: " +
+    return super.toString() + "\nIP:\nVersion: " + getIp_version() + "\nIHL: " +
     getIp_IHL() + "\nTOS: "+ getIp_TOS() + "\nLength: "+ getIp_length() +
     "\nIdentification: " + getIp_identification() + "\nDF: " + isIp_DFflag() +
     "\nMF: " + isIp_MFflag() + "\nFragment Offset: " + getIp_fragmentOffset()
