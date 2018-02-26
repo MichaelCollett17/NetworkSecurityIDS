@@ -23,6 +23,8 @@ public class NetworkSecurityOne {
 		String filterVal = "";
 		boolean filterSrc = false;
 		InetAddress src = null;
+		boolean filterDst = false;
+		InetAddress dst = null;
 
 
 		SimplePacketDriver driver=new SimplePacketDriver();
@@ -60,6 +62,16 @@ public class NetworkSecurityOne {
 					try{
 						src = InetAddress.getByName(args[idx]);
 						System.out.println(src.toString());
+					} catch(Exception e){
+						e.printStackTrace();
+					}
+					break;
+				case "-dst":
+					idx++;
+					filterDst = true;
+					try{
+						dst = InetAddress.getByName(args[idx]);
+						System.out.println(dst.toString());
 					} catch(Exception e){
 						e.printStackTrace();
 					}
@@ -106,7 +118,8 @@ public class NetworkSecurityOne {
 			if(ethertype == "ip"){
 				IPPacket ip = new IPPacket(packet);
 				String iptype = ip.resolveIPProtocol();
-				if(filterSrc && (!src.toString().equals(ip.getIp_sourceAddress().toString()))){
+				if((filterSrc && (!src.toString().equals(ip.getIp_sourceAddress().toString()))) ||
+							(filterDst && (!dst.toString().equals(ip.getIp_destAddress().toString())))){
 					packetNum++;
 					continue;
 				}
@@ -145,7 +158,8 @@ public class NetworkSecurityOne {
 				}
 			} else if(ethertype == "arp"){
 				ARP a = new ARP(packet);
-				if(filterSrc && (!src.toString().equals(a.getArp_senderProtocolAddress().toString()))){
+				if((filterSrc && (!src.toString().equals(a.getArp_senderProtocolAddress().toString()))) ||
+				((filterDst && (!dst.toString().equals(a.getArp_targetProtocolAddress().toString()))))){
 					packetNum++;
 					continue;
 				}
