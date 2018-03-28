@@ -1,11 +1,12 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Reassembler{
 
-  private List<AssembledTriple>  unassembledTriples;
+  private static List<AssembledTriple>  unassembledTriples;
 
   public Reassembler(){
-    unassembledTriples = new List<AssembledTriple>();
+    unassembledTriples = new ArrayList<AssembledTriple>();
   }
 
   public AssembledTriple processFragment(byte[] packet){
@@ -17,8 +18,15 @@ public class Reassembler{
       AssembledTriple at = searchList(ident);
       if(at == null){
         at = new AssembledTriple();
-        at.setIdentification = ident;
-        at.addIPFrag(packet);
+        at.setIdentification(ident);
+        boolean done = at.addIPFrag(packet);
+        if(done){
+          return at;
+        }
+        else{
+          unassembledTriples.add(at);
+          return null;
+        }
       }
       else{
         unassembledTriples.remove(at);
@@ -28,9 +36,9 @@ public class Reassembler{
         }
         else{
           unassembledTriples.add(at);
+          return null;
         }
       }
-      return null;
     }
     else if(etype.equals("arp")){
       AssembledTriple at = new AssembledTriple(0, -1, packet);
@@ -38,6 +46,7 @@ public class Reassembler{
     }
     else{
       System.out.println("Unimplemented Type");
+      return null;
     }
   }
 

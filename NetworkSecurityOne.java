@@ -155,6 +155,7 @@ public class NetworkSecurityOne {
 			}
 		}
 
+		Reassembler reassembler = new Reassembler();
 		int packetNum = 0;
     while((packetNum<count) && (!isFile || (scan.hasNext()))){
 			byte [] packet = null;
@@ -167,8 +168,12 @@ public class NetworkSecurityOne {
 				}
 			}
 			packetNum++;
-			//reassemble
-			analyze(packet);
+			AssembledTriple at = reassembler.processFragment(packet);
+			if(at == null){
+			}
+			else if((at.getSID() == 0)|(at.getSID() == 1)|(at.getSID() == 2)){
+				analyze(at.getAssembledPacket());
+			}
 		}
 		if(saveOutput)
 			writer.close();

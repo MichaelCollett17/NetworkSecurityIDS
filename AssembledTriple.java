@@ -6,7 +6,7 @@ public class AssembledTriple{
   final int correct = 1;//one, reassembled packet, list of frags
   final int correct_overlap = 2;//two, reassembled packet, list of frags
   final int oversized = 3;//three, first packet, list of ALL frags
-  final int correct = 4;//four, first segment, list of all parially processed segments
+  final int timedout = 4;//four, first segment, list of all parially processed segments
 
   private int identification;
   private int sid;
