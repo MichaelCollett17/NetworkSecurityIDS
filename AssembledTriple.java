@@ -13,7 +13,7 @@ public class AssembledTriple{
   private int sid;
   private byte[] assembledPacket;
   private ArrayList<byte[]> fragments = new ArrayList<byte[]>();
-
+  private boolean overwrote = false;
   //ONLY USED FOR IP
   public AssembledTriple(){
     identification = -2;
@@ -31,10 +31,13 @@ public class AssembledTriple{
 
   //preference to overwriting new data (like linux)
   public boolean addIPFrag(byte[] packet){
+    //delete this!
+    //SimplePacketDriver driver=new SimplePacketDriver();
+
     IPPacket ip = new IPPacket(packet);
     setIdentification(ip.getIp_identification());
     this.fragments.add(packet);
-    int length = ip.getIp_length();
+    int length = ip.getIp_length() + 14;//14 for ethernet header
     if(assembledPacket == null){
       assembledPacket = new byte[length];
       //set a value = index for each of the holes
@@ -43,22 +46,37 @@ public class AssembledTriple{
       }
     }
     int ethAndHeaderLen = 14 + (ip.getIp_IHL()*4); //14 eth header + IHL*4 for ip header
-    for(int index = 0; index < ethAndHeaderLen; index++){
-      assembledPacket[index] = packet[index];
-      Integer i = new Integer(index);
+    System.out.println("EthandHead:"+ethAndHeaderLen);
+    int packetIndex;
+    for(packetIndex = 0; packetIndex < ethAndHeaderLen; packetIndex++){
+      assembledPacket[packetIndex] = packet[packetIndex];
+      Integer i = new Integer(packetIndex);
       holes.remove(i);
     }
     int offset = ip.getIp_fragmentOffset() * 8;
-    int packetEnd = (packet.length - ethAndHeaderLen) + offset;
-    System.out.println("Length:    " + length + "\noffset:    " + offset
-      + "\npacketend: " + packetEnd);
-    for(int idx= offset + ethAndHeaderLen; idx < packetEnd + ethAndHeaderLen; idx++){
-      assembledPacket[idx] = packet[idx];
+    int packetEnd = (packet.length) + offset;
+    //This accounts for Ethernet Padding! why the heck is padding inconsistent??
+    //need to check this with papa before submission
+    if((packetEnd == 60) && (length < 60)){
+      packetEnd = length;//ignore padding
+    }
+    //System.out.println("Length:    " + length + "\noffset:    " + offset
+    //  + "\npacketend: " + packetEnd+ "\npacketLen: "+ packet.length);
+    //System.out.println(driver.byteArrayToString(packet));
+    for(int idx= offset + ethAndHeaderLen; idx < packetEnd; idx++){
+      assembledPacket[idx] = packet[packetIndex];
       Integer i = new Integer(idx);
       holes.remove(i);
+      packetIndex++;
     }
-    System.out.println("Holes:     " + holes.size() + "\n***********");
+    //System.out.println("Holes:     " + holes.size() + "\n***********");
     if(holes.size() == 0){
+      if(overwrote){
+          setSID(correct_overlap);
+      }
+      else if(getSID() == -1){
+        setSID(correct);
+      }
       return true;
     }
     else{
