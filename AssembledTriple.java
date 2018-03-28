@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 
 public class AssembledTriple{
@@ -9,11 +10,59 @@ public class AssembledTriple{
 
   private int identification;
   private int sid;
-  private IPPacket assembledPacket;
-  private ArrayList<IPPacket> fragments;
+  private byte[] assembledPacket;
+  private ArrayList<byte[]> fragments = new ArrayList<byte[]>();
 
+  //ONLY USED FOR IP
   public AssembledTriple(){
+    identification = -2;
+    sid = -1;
+    assembledPacket = null;
+  }
 
+  //only used for arp
+  public AssembledTriple(int s, int ident, byte[] packet){
+    identification = ident;
+    sid = s;
+    assembledPacket = packet;
+    fragments.add(packet);
+  }
+
+  public boolean addIPFrag(byte[] packet){
+    //add frag logic
+    return false;
+  }
+
+  public int getIdentification(){
+    return identification;
+  }
+
+  public void setIdentification(int ident){
+    this.identification = ident;
+  }
+
+  public int getSID(){
+    return sid;
+  }
+
+  public void setSID(int s){
+    this.sid = s;
+  }
+
+  public byte[] getAssembledPacket(){
+    return assembledPacket;
+  }
+
+  public void setAssembledPacket(byte[] p){
+    this.assembledPacket = p;
+  }
+
+  public ArrayList<byte[]> getFragments(){
+    return fragments;
+  }
+
+  public void setFragments(ArrayList<byte[]> frags){
+    this.fragments = frags;
   }
 
 }

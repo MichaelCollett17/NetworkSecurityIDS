@@ -183,7 +183,7 @@ public class NetworkSecurityOne {
 			System.out.println(ethernet.toString());
 		}
 		String ethertype = ethernet.resolveEthertype();
-		if(ethertype == "ip"){
+		if(ethertype.equals("ip")){
 			IPPacket ip = new IPPacket(packet);
 
 
@@ -203,7 +203,7 @@ public class NetworkSecurityOne {
 				}
 				System.out.println(ip.toString());
 			}
-			if(iptype == "icmp"){
+			if(iptype.equals("icmp")){
 				ICMP icmp = new ICMP(packet);
 				if((!filterType) || filterVal.equals("icmp")){
 					if(saveOutput){
@@ -212,7 +212,7 @@ public class NetworkSecurityOne {
 					System.out.println(icmp.toString());
 				}
 			}
-			else if(iptype == "udp"){
+			else if(iptype.equals("udp")){
 				UDP udp = new UDP(packet);
 				if((filtSPort) && !((udp.getUdp_sourcePort() <= sPortMax) && (udp.getUdp_sourcePort() >= sPortMin))){
 					return;
@@ -227,7 +227,7 @@ public class NetworkSecurityOne {
 					}
 				}
 			}
-			else if(iptype == "tcp"){
+			else if(iptype.equals("tcp")){
 				TCP tcp = new TCP(packet);
 				if((filtSPort) && !((tcp.getTcp_sourcePort() <= sPortMax) && (tcp.getTcp_sourcePort() >= sPortMin))){
 					return;
@@ -242,7 +242,7 @@ public class NetworkSecurityOne {
 					}
 				}
 			}
-		} else if(ethertype == "arp"){
+		} else if(ethertype.equals("arp")){
 			ARP a = new ARP(packet);
 			if(!sord && ((filterSrc && (!src.toString().equals(a.getArp_senderProtocolAddress().toString())))||
 			((filterDst && (!dst.toString().equals(a.getArp_targetProtocolAddress().toString())))))){
