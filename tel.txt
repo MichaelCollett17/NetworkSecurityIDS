@@ -1,0 +1,847 @@
+C:\Users\micha\Documents\projectOneNetSec\NetworkSPFG>java NetworkSecurityOne -c 50 -dst 192.168.1.22 -o ellie.dat
+/192.168.1.22
+Device name in Java =\Device\NPF_{4B8719D0-291B-4085-883B-828C6BB4156B}
+Device name in Java =\Device\NPF_{85B56993-5F41-4D27-ADC1-DA0AADB4D879}
+Device name in Java =\Device\NPF_{A975A761-F795-4F01-AA6D-08A2CC256C78}
+Device name in Java =\Device\NPF_{FCE08470-A4C3-4704-92DF-1A7E1A3E813A}
+Adapter is open: \Device\NPF_{4B8719D0-291B-4085-883B-828C6BB4156B}
+00 60 97 B9 58 7D 00 C0   4F 8D 93 F2 08 00 45 00    .`..X}..O.....E.
+00 3C 00 00 40 00 40 06   B6 EB C0 A8 01 42 C0 A8    .<..@.@......B..
+01 3E 00 15 13 48 A1 4D   C1 18 29 D1 0D 30 A0 12    .>...H.M..)..0..
+16 A0 23 2D 00 00 02 04   05 B4 04 02 08 0A 2B 37    ..#-..........+7
+0C F1 FA 9B AA D0 01 03   03 00                      ..........
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 00    ..O....`..X}..E.
+00 3C A7 FF 40 00 40 06   0E EC C0 A8 01 3E C0 A8    .<..@.@......>..
+01 42 13 48 00 15 29 D1   0D 2F 00 00 00 00 A0 02    .B.H..)../......
+16 D0 BD 9C 00 00 02 04   05 B4 04 02 08 0A FA 9B    ................
+AA D0 00 00 00 00 01 03   03 00                      ..........
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 00    ..O....`..X}..E.
+00 34 A8 00 40 00 40 06   0E F3 C0 A8 01 3E C0 A8    .4..@.@......>..
+01 42 13 48 00 15 29 D1   0D 30 A1 4D C1 19 80 10    .B.H..)..0.M....
+16 D0 51 C2 00 00 01 01   08 0A FA 9B AA D0 2B 37    ..Q...........+7
+0C F1                                                ..
+
+00 60 97 B9 58 7D 00 C0   4F 8D 93 F2 08 00 45 10    .`..X}..O.....E.
+00 94 CD E8 40 00 40 06   E8 9A C0 A8 01 42 C0 A8    ....@.@......B..
+01 3E 00 15 13 48 A1 4D   C1 19 29 D1 0D 30 80 18    .>...H.M..)..0..
+16 A0 64 4C 00 00 01 01   08 0A 2B 37 0C F5 FA 9B    ..dL......+7....
+AA D0 32 32 30 20 50 72   6F 46 54 50 44 20 31 2E    ..220 ProFTPD 1.
+32 2E 39 20 53 65 72 76   65 72 20 28 4C 61 6E 74    2.9 Server (Lant
+68 61 6E 75 6D 20 46 54   50 20 53 65 72 76 65 72    hanum FTP Server
+20 28 47 72 6F 75 70 20   31 35 29 29 20 5B 6C 61     (Group 15)) [la
+6E 74 68 61 6E 75 6D 2E   67 72 6F 75 70 31 35 2E    nthanum.group15.
+73 73 61 63 2E 75 74 75   6C 73 61 2E 65 64 75 5D    ssac.utulsa.edu]
+0D 0A                                                ..
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 10    ..O....`..X}..E.
+00 34 A8 01 40 00 40 06   0E E2 C0 A8 01 3E C0 A8    .4..@.@......>..
+01 42 13 48 00 15 29 D1   0D 30 A1 4D C1 79 80 10    .B.H..)..0.M.y..
+16 D0 51 3A 00 00 01 01   08 0A FA 9B AA F4 2B 37    ..Q:..........+7
+0C F5                                                ..
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 10    ..O....`..X}..E.
+00 3E A8 02 40 00 40 06   0E D7 C0 A8 01 3E C0 A8    .>..@.@......>..
+01 42 13 48 00 15 29 D1   0D 30 A1 4D C1 79 80 18    .B.H..)..0.M.y..
+16 D0 3A E0 00 00 01 01   08 0A FA 9B AA F5 2B 37    ..:...........+7
+0C F5 41 55 54 48 20 53   53 4C 0D 0A                ..AUTH SSL..
+
+00 60 97 B9 58 7D 00 C0   4F 8D 93 F2 08 00 45 10    .`..X}..O.....E.
+00 34 CD E9 40 00 40 06   E8 F9 C0 A8 01 42 C0 A8    .4..@.@......B..
+01 3E 00 15 13 48 A1 4D   C1 79 29 D1 0D 3A 80 10    .>...H.M.y)..:..
+16 A0 51 5F 00 00 01 01   08 0A 2B 37 0C F5 FA 9B    ..Q_......+7....
+AA F5                                                ..
+
+00 60 97 B9 58 7D 00 C0   4F 8D 93 F2 08 00 45 10    .`..X}..O.....E.
+00 4D CD EA 40 00 40 06   E8 DF C0 A8 01 42 C0 A8    .M..@.@......B..
+01 3E 00 15 13 48 A1 4D   C1 79 29 D1 0D 3A 80 18    .>...H.M.y)..:..
+16 A0 81 30 00 00 01 01   08 0A 2B 37 0C F5 FA 9B    ...0......+7....
+AA F5 35 30 30 20 41 55   54 48 20 6E 6F 74 20 75    ..500 AUTH not u
+6E 64 65 72 73 74 6F 6F   64 0D 0A                   nderstood..
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 10    ..O....`..X}..E.
+00 42 A8 03 40 00 40 06   0E D2 C0 A8 01 3E C0 A8    .B..@.@......>..
+01 42 13 48 00 15 29 D1   0D 3A A1 4D C1 92 80 18    .B.H..)..:.M....
+16 D0 6F D4 00 00 01 01   08 0A FA 9B AA F6 2B 37    ..o...........+7
+0C F5 55 53 45 52 20 67   72 6F 75 70 31 34 0D 0A    ..USER group14..
+
+
+00 60 97 B9 58 7D 00 C0   4F 8D 93 F2 08 00 45 10    .`..X}..O.....E.
+00 58 CD EB 40 00 40 06   E8 D3 C0 A8 01 42 C0 A8    .X..@.@......B..
+01 3E 00 15 13 48 A1 4D   C1 92 29 D1 0D 48 80 18    .>...H.M..)..H..
+16 A0 0C 5B 00 00 01 01   08 0A 2B 37 0C F5 FA 9B    ...[......+7....
+AA F6 33 33 31 20 50 61   73 73 77 6F 72 64 20 72    ..331 Password r
+65 71 75 69 72 65 64 20   66 6F 72 20 67 72 6F 75    equired for grou
+70 31 34 2E 0D 0A                                    p14...
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 10    ..O....`..X}..E.
+00 47 A8 04 40 00 40 06   0E CC C0 A8 01 3E C0 A8    .G..@.@......>..
+01 42 13 48 00 15 29 D1   0D 48 A1 4D C1 B6 80 18    .B.H..)..H.M....
+16 D0 56 F1 00 00 01 01   08 0A FA 9B AA F7 2B 37    ..V...........+7
+0C F5 50 41 53 53 20 31   39 32 2E 31 36 38 2E 31    ..PASS 192.168.1
+2E 36 32 0D 0A                                       .62..
+
+00 60 97 B9 58 7D 00 C0   4F 8D 93 F2 08 00 45 10    .`..X}..O.....E.
+00 4A CD EC 40 00 40 06   E8 E0 C0 A8 01 42 C0 A8    .J..@.@......B..
+01 3E 00 15 13 48 A1 4D   C1 B6 29 D1 0D 5B 80 18    .>...H.M..)..[..
+16 A0 A3 A8 00 00 01 01   08 0A 2B 37 0C F5 FA 9B    ..........+7....
+AA F7 35 33 30 20 4C 6F   67 69 6E 20 69 6E 63 6F    ..530 Login inco
+72 72 65 63 74 2E 0D 0A                              rrect...
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 10    ..O....`..X}..E.
+00 3A A8 05 40 00 40 06   0E D8 C0 A8 01 3E C0 A8    .:..@.@......>..
+01 42 13 48 00 15 29 D1   0D 5B A1 4D C1 CC 80 18    .B.H..)..[.M....
+16 D0 9C F2 00 00 01 01   08 0A FA 9B AA F8 2B 37    ..............+7
+0C F5 53 59 53 54 0D 0A                              ..SYST..
+
+00 60 97 B9 58 7D 00 C0   4F 8D 93 F2 08 00 45 10    .`..X}..O.....E.
+00 47 CD ED 40 00 40 06   E8 E2 C0 A8 01 42 C0 A8    .G..@.@......B..
+01 3E 00 15 13 48 A1 4D   C1 CC 29 D1 0D 61 80 18    .>...H.M..)..a..
+16 A0 E9 76 00 00 01 01   08 0A 2B 37 0C F5 FA 9B    ...v......+7....
+AA F8 32 31 35 20 55 4E   49 58 20 54 79 70 65 3A    ..215 UNIX Type:
+20 4C 38 0D 0A                                        L8..
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 10    ..O....`..X}..E.
+00 3A A8 06 40 00 40 06   0E D7 C0 A8 01 3E C0 A8    .:..@.@......>..
+01 42 13 48 00 15 29 D1   0D 61 A1 4D C1 DF 80 18    .B.H..)..a.M....
+16 D0 A8 DD 00 00 01 01   08 0A FA 9B AA F8 2B 37    ..............+7
+0C F5 51 55 49 54 0D 0A                              ..QUIT..
+
+00 60 97 B9 58 7D 00 C0   4F 8D 93 F2 08 00 45 10    .`..X}..O.....E.
+00 42 CD EE 40 00 40 06   E8 E6 C0 A8 01 42 C0 A8    .B..@.@......B..
+01 3E 00 15 13 48 A1 4D   C1 DF 29 D1 0D 67 80 18    .>...H.M..)..g..
+16 A0 61 DB 00 00 01 01   08 0A 2B 37 0C F5 FA 9B    ..a.......+7....
+AA F8 32 32 31 20 47 6F   6F 64 62 79 65 2E 0D 0A    ..221 Goodbye...
+
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 10    ..O....`..X}..E.
+00 34 A8 07 40 00 40 06   0E DC C0 A8 01 3E C0 A8    .4..@.@......>..
+01 42 13 48 00 15 29 D1   0D 67 A1 4D C1 ED 80 11    .B.H..)..g.M....
+16 D0 50 89 00 00 01 01   08 0A FA 9B AA F9 2B 37    ..P...........+7
+0C F5                                                ..
+
+00 60 97 B9 58 7D 00 C0   4F 8D 93 F2 08 00 45 10    .`..X}..O.....E.
+00 34 CD EF 40 00 40 06   E8 F3 C0 A8 01 42 C0 A8    .4..@.@......B..
+01 3E 00 15 13 48 A1 4D   C1 ED 29 D1 0D 68 80 11    .>...H.M..)..h..
+16 A0 50 B8 00 00 01 01   08 0A 2B 37 0C F5 FA 9B    ..P.......+7....
+AA F9                                                ..
+
+00 C0 4F 8D 93 F2 00 60   97 B9 58 7D 08 00 45 10    ..O....`..X}..E.
+00 34 A8 08 40 00 40 06   0E DB C0 A8 01 3E C0 A8    .4..@.@......>..
+01 42 13 48 00 15 29 D1   0D 68 A1 4D C1 EE 80 10    .B.H..)..h.M....
+16 D0 50 88 00 00 01 01   08 0A FA 9B AA F9 2B 37    ..P...........+7
+0C F5                                                ..
+
+00 C0 4F 8D 99 37 08 00   20 AB D4 A4 08 00 45 00    ..O..7.. .....E.
+00 30 33 C6 40 00 40 06   83 91 C0 A8 01 16 C0 A8    .03.@.@.........
+01 0A AB DF 00 50 8E 63   1E F0 00 00 00 00 70 02    .....P.c......p.
+C1 E8 E4 42 00 00 02 04   05 B4 01 01 04 02          ...B..........
+
+08 00 20 AB D4 A4 00 C0   4F 8D 99 37 08 00 45 00    .. .....O..7..E.
+00 30 41 B7 40 00 40 06   75 A0 C0 A8 01 0A C0 A8    .0A.@.@.u.......
+01 16 00 50 AB DF E8 41   11 BC 8E 63 1E F1 70 12    ...P...A...c..p.
+40 00 6C 1C 00 00 02 04   05 B4 01 01 04 02          @.l...........
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D9937
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 48
+Identification: 16823
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: 75A0
+Source Address: /192.168.1.10
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 80
+Destination Port: 21537
+Sequence Number: 398388804
+Ack Number: 1906106639
+Data Offset: 7
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16384
+Checksum: 6C1C
+Urgent Pointer: 0
+Options: 020405B401010402
+Data:
+00 C0 4F 8D 99 37 08 00   20 AB D4 A4 08 00 45 00    ..O..7.. .....E.
+00 28 33 C7 40 00 40 06   83 98 C0 A8 01 16 C0 A8    .(3.@.@.........
+01 0A AB DF 00 50 8E 63   1E F1 E8 41 11 BD 50 10    .....P.c...A..P.
+C1 E8 16 F8 00 00 55 55   55 55 55 55                ......UUUUUU
+
+00 C0 4F 8D 99 37 08 00   20 AB D4 A4 08 00 45 00    ..O..7.. .....E.
+00 3F 33 C8 40 00 40 06   83 80 C0 A8 01 16 C0 A8    .?3.@.@.........
+01 0A AB DF 00 50 8E 63   1E F1 E8 41 11 BD 50 18    .....P.c...A..P.
+C1 E8 41 69 00 00 47 45   54 20 2F 63 73 37 34 39    ..Ai..GET /cs749
+33 2F 20 48 54 54 50 2F   31 2E 30 0D 0A             3/ HTTP/1.0..
+
+08 00 20 AB D4 A4 00 C0   4F 8D 99 37 08 00 45 00    .. .....O..7..E.
+00 28 1C E3 40 00 40 06   9A 7C C0 A8 01 0A C0 A8    .(..@.@..|......
+01 16 00 50 AB DF E8 41   11 BD 8E 63 1F 08 50 10    ...P...A...c..P.
+44 70 94 59 00 00 00 00   00 00 00 00                Dp.Y........
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D9937
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 7395
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: 9A7C
+Source Address: /192.168.1.10
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 80
+Destination Port: 21537
+Sequence Number: 398388803
+Ack Number: 1906106616
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17520
+Checksum: 9459
+Urgent Pointer: 0
+Options:
+Data: 000000000000
+00 C0 4F 8D 99 37 08 00   20 AB D4 A4 08 00 45 00    ..O..7.. .....E.
+00 2E 33 C9 40 00 40 06   83 90 C0 A8 01 16 C0 A8    ..3.@.@.........
+01 0A AB DF 00 50 8E 63   1F 08 E8 41 11 BD 50 18    .....P.c...A..P.
+C1 E8 EF B4 00 00 0D 0A   0D 0A 0D 0A                ............
+
+08 00 20 AB D4 A4 00 C0   4F 8D 99 37 08 00 45 00    .. .....O..7..E.
+01 97 54 4B 40 00 40 06   61 A5 C0 A8 01 0A C0 A8    ..TK@.@.a.......
+01 16 00 50 AB DF E8 41   11 BD 8E 63 1F 0E 50 18    ...P...A...c..P.
+44 70 59 F2 00 00 48 54   54 50 2F 31 2E 31 20 32    DpY...HTTP/1.1 2
+30 30 20 4F 4B 0D 0A 44   61 74 65 3A 20 57 65 64    00 OK..Date: Wed
+2C 20 31 39 20 4A 61 6E   20 32 30 30 35 20 31 31    , 19 Jan 2005 11
+3A 35 32 3A 35 36 20 47   4D 54 0D 0A 53 65 72 76    :52:56 GMT..Serv
+65 72 3A 20 41 70 61 63   68 65 2F 31 2E 33 2E 32    er: Apache/1.3.2
+39 20 28 55 6E 69 78 29   20 6D 6F 64 5F 73 73 6C    9 (Unix) mod_ssl
+2F 32 2E 38 2E 31 36 20   4F 70 65 6E 53 53 4C 2F    /2.8.16 OpenSSL/
+30 2E 39 2E 37 63 0D 0A   4C 61 73 74 2D 4D 6F 64    0.9.7c..Last-Mod
+69 66 69 65 64 3A 20 57   65 64 2C 20 32 37 20 4F    ified: Wed, 27 O
+63 74 20 32 30 30 34 20   31 34 3A 31 34 3A 34 34    ct 2004 14:14:44
+20 47 4D 54 0D 0A 45 54   61 67 3A 20 22 33 30 35     GMT..ETag: "305
+39 34 35 35 66 36 64 32   32 36 36 38 62 36 38 62    9455f6d22668b68b
+64 37 33 33 35 38 39 66   31 65 66 64 30 39 37 38    d733589f1efd0978
+65 36 63 38 30 22 0D 0A   41 63 63 65 70 74 2D 52    e6c80"..Accept-R
+61 6E 67 65 73 3A 20 62   79 74 65 73 0D 0A 43 6F    anges: bytes..Co
+6E 74 65 6E 74 2D 4C 65   6E 67 74 68 3A 20 36 39    ntent-Length: 69
+0D 0A 43 6F 6E 6E 65 63   74 69 6F 6E 3A 20 63 6C    ..Connection: cl
+6F 73 65 0D 0A 43 6F 6E   74 65 6E 74 2D 54 79 70    ose..Content-Typ
+65 3A 20 74 65 78 74 2F   68 74 6D 6C 0D 0A 0D 0A    e: text/html....
+3C 68 74 6D 6C 3E 0A 3C   62 6F 64 79 3E 68 65 79    <html>.<body>hey
+2C 20 43 6F 6E 67 72 61   74 73 2C 20 79 6F 75 27    , Congrats, you'
+76 65 20 66 6F 75 6E 64   20 6F 75 72 20 77 65 62    ve found our web
+20 70 61 67 65 21 3C 2F   62 6F 64 79 3E 3C 2F 68     page!</body></h
+74 6D 6C 3E 0A                                       tml>.
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D9937
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 407
+Identification: 21579
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: 61A5
+Source Address: /192.168.1.10
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 80
+Destination Port: 21537
+Sequence Number: 398388803
+Ack Number: 1906106610
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17520
+Checksum: 59F2
+Urgent Pointer: 0
+Options:
+Data: 485454502F312E3120323030204F4B0D0A446174653A205765642C203139204A616E20323030352031313A35323A353620474D540D0A5365727665723A204170616368652F312E332E32392028556E697829206D6F645F73736C2F322E382E3136204F70656E53534C2F302E392E37630D0A4C6173742D4D6F6469666965643A205765642C203237204F637420323030342031343A31343A343420474D540D0A455461673A202233303539343535663664323236363862363862643733333538396631656664303937386536633830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A2036390D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A0D0A3C68746D6C3E0A3C626F64793E6865792C20436F6E67726174732C20796F7527766520666F756E64206F7572207765622070616765213C2F626F64793E3C2F68746D6C3E0A
+08 00 20 AB D4 A4 00 C0   4F 8D 99 37 08 00 45 00    .. .....O..7..E.
+00 28 69 05 40 00 40 06   4E 5A C0 A8 01 0A C0 A8    .(i.@.@.NZ......
+01 16 00 50 AB DF E8 41   13 2C 8E 63 1F 0E 50 11    ...P...A.,.c..P.
+44 70 92 E3 00 00 00 00   00 00 00 00                Dp..........
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D9937
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 26885
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: 4E5A
+Source Address: /192.168.1.10
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 80
+Destination Port: 21537
+Sequence Number: 398388436
+Ack Number: 1906106610
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17520
+Checksum: 92E3
+Urgent Pointer: 0
+Options:
+Data: 000000000000
+00 C0 4F 8D 99 37 08 00   20 AB D4 A4 08 00 45 00    ..O..7.. .....E.
+00 28 33 CA 40 00 40 06   83 95 C0 A8 01 16 C0 A8    .(3.@.@.........
+01 0A AB DF 00 50 8E 63   1F 0E E8 41 13 2C 50 10    .....P.c...A.,P.
+C0 79 16 DB 00 00 55 55   55 55 55 55                .y....UUUUUU
+
+00 C0 4F 8D 99 37 08 00   20 AB D4 A4 08 00 45 00    ..O..7.. .....E.
+00 28 33 CB 40 00 40 06   83 94 C0 A8 01 16 C0 A8    .(3.@.@.........
+01 0A AB DF 00 50 8E 63   1F 0E E8 41 13 2D 50 10    .....P.c...A.-P.
+C0 79 16 DA 00 00 55 55   55 55 55 55                .y....UUUUUU
+
+00 C0 4F 8D 99 37 08 00   20 AB D4 A4 08 00 45 00    ..O..7.. .....E.
+00 28 33 CC 40 00 40 06   83 93 C0 A8 01 16 C0 A8    .(3.@.@.........
+01 0A AB DF 00 50 8E 63   1F 0E E8 41 13 2D 50 11    .....P.c...A.-P.
+C0 79 16 D9 00 00 55 55   55 55 55 55                .y....UUUUUU
+
+08 00 20 AB D4 A4 00 C0   4F 8D 99 37 08 00 45 00    .. .....O..7..E.
+00 28 7C E8 40 00 40 06   3A 77 C0 A8 01 0A C0 A8    .(|.@.@.:w......
+01 16 00 50 AB DF E8 41   13 2D 8E 63 1F 0F 50 10    ...P...A.-.c..P.
+44 70 92 E2 00 00 00 00   00 00 00 00                Dp..........
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D9937
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 31976
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: 3A77
+Source Address: /192.168.1.10
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 80
+Destination Port: 21537
+Sequence Number: 398388435
+Ack Number: 1906106609
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17520
+Checksum: 92E2
+Urgent Pointer: 0
+Options:
+Data: 000000000000
+FF FF FF FF FF FF F0 1F   AF 28 65 11 08 00 45 00    .........(e...E.
+00 AE 41 D1 00 00 80 11   00 00 A9 FE 04 47 FF FF    ..A..........G..
+FF FF 44 5C 44 5C 00 9A   AE F0 7B 22 68 6F 73 74    ..D\D\....{"host
+5F 69 6E 74 22 3A 20 33   33 30 39 30 31 34 38 34    _int": 330901484
+32 34 39 32 34 31 31 31   31 37 36 37 31 36 36 37    2492411117671667
+39 30 32 37 38 32 32 33   35 32 32 36 32 38 2C 20    90278223522628,
+22 76 65 72 73 69 6F 6E   22 3A 20 5B 32 2C 20 30    "version": [2, 0
+5D 2C 20 22 64 69 73 70   6C 61 79 6E 61 6D 65 22    ], "displayname"
+3A 20 22 22 2C 20 22 70   6F 72 74 22 3A 20 31 37    : "", "port": 17
+35 30 30 2C 20 22 6E 61   6D 65 73 70 61 63 65 73    500, "namespaces
+22 3A 20 5B 31 30 34 39   39 34 34 31 33 36 2C 20    ": [1049944136,
+32 31 38 34 34 31 35 36   33 32 5D 7D                2184415632]}
+
+FF FF FF FF FF FF F0 1F   AF 28 65 11 08 00 45 00    .........(e...E.
+00 AE 0D A9 00 00 80 11   00 00 A9 FE 04 47 A9 FE    .............G..
+FF FF 44 5C 44 5C 00 9A   58 EF 7B 22 68 6F 73 74    ..D\D\..X.{"host
+5F 69 6E 74 22 3A 20 33   33 30 39 30 31 34 38 34    _int": 330901484
+32 34 39 32 34 31 31 31   31 37 36 37 31 36 36 37    2492411117671667
+39 30 32 37 38 32 32 33   35 32 32 36 32 38 2C 20    90278223522628,
+22 76 65 72 73 69 6F 6E   22 3A 20 5B 32 2C 20 30    "version": [2, 0
+5D 2C 20 22 64 69 73 70   6C 61 79 6E 61 6D 65 22    ], "displayname"
+3A 20 22 22 2C 20 22 70   6F 72 74 22 3A 20 31 37    : "", "port": 17
+35 30 30 2C 20 22 6E 61   6D 65 73 70 61 63 65 73    500, "namespaces
+22 3A 20 5B 31 30 34 39   39 34 34 31 33 36 2C 20    ": [1049944136,
+32 31 38 34 34 31 35 36   33 32 5D 7D                2184415632]}
+
+FF FF FF FF FF FF F0 1F   AF 28 65 11 08 00 45 00    .........(e...E.
+00 AE 41 D2 00 00 80 11   00 00 A9 FE 04 47 FF FF    ..A..........G..
+FF FF 44 5C 44 5C 00 9A   AE F0 7B 22 68 6F 73 74    ..D\D\....{"host
+5F 69 6E 74 22 3A 20 33   33 30 39 30 31 34 38 34    _int": 330901484
+32 34 39 32 34 31 31 31   31 37 36 37 31 36 36 37    2492411117671667
+39 30 32 37 38 32 32 33   35 32 32 36 32 38 2C 20    90278223522628,
+22 76 65 72 73 69 6F 6E   22 3A 20 5B 32 2C 20 30    "version": [2, 0
+5D 2C 20 22 64 69 73 70   6C 61 79 6E 61 6D 65 22    ], "displayname"
+3A 20 22 22 2C 20 22 70   6F 72 74 22 3A 20 31 37    : "", "port": 17
+35 30 30 2C 20 22 6E 61   6D 65 73 70 61 63 65 73    500, "namespaces
+22 3A 20 5B 31 30 34 39   39 34 34 31 33 36 2C 20    ": [1049944136,
+32 31 38 34 34 31 35 36   33 32 5D 7D                2184415632]}
+
+FF FF FF FF FF FF F0 1F   AF 28 65 11 08 00 45 00    .........(e...E.
+00 AE 41 D3 00 00 80 11   00 00 A9 FE 04 47 FF FF    ..A..........G..
+FF FF 44 5C 44 5C 00 9A   AE F0 7B 22 68 6F 73 74    ..D\D\....{"host
+5F 69 6E 74 22 3A 20 33   33 30 39 30 31 34 38 34    _int": 330901484
+32 34 39 32 34 31 31 31   31 37 36 37 31 36 36 37    2492411117671667
+39 30 32 37 38 32 32 33   35 32 32 36 32 38 2C 20    90278223522628,
+22 76 65 72 73 69 6F 6E   22 3A 20 5B 32 2C 20 30    "version": [2, 0
+5D 2C 20 22 64 69 73 70   6C 61 79 6E 61 6D 65 22    ], "displayname"
+3A 20 22 22 2C 20 22 70   6F 72 74 22 3A 20 31 37    : "", "port": 17
+35 30 30 2C 20 22 6E 61   6D 65 73 70 61 63 65 73    500, "namespaces
+22 3A 20 5B 31 30 34 39   39 34 34 31 33 36 2C 20    ": [1049944136,
+32 31 38 34 34 31 35 36   33 32 5D 7D                2184415632]}
+
+08 00 20 AB D4 A4 00 C0   4F 8D 93 F2 08 00 45 10    .. .....O.....E.
+00 3C ED C9 40 00 40 06   C9 39 C0 A8 01 42 C0 A8    .<..@.@..9...B..
+01 16 DD D4 00 17 B9 4E   72 3F 00 00 00 00 A0 02    .......Nr?......
+16 D0 D8 E6 00 00 02 04   05 B4 04 02 08 0A 2B 37    ..............+7
+9F F6 00 00 00 00 01 03   03 00                      ..........
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D93F2
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 60
+Identification: 4663
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: C939
+Source Address: /192.168.1.66
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 8748
+Destination Port: 23
+Sequence Number: 1186041281
+Ack Number: 0
+Data Offset: 10
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: D8E6
+Urgent Pointer: 0
+Options: 020405B40402080A2B379FF60000000001030300
+Data:
+00 C0 4F 8D 93 F2 08 00   20 AB D4 A4 08 00 45 00    ..O..... .....E.
+00 40 97 1E 40 00 3C 06   23 F1 C0 A8 01 16 C0 A8    .@..@.<.#.......
+01 42 00 17 DD D4 90 7E   14 36 B9 4E 72 40 B0 12    .B.....~.6.Nr@..
+C0 50 21 B5 00 00 01 01   08 0A 19 95 3D 50 2B 37    .P!.........=P+7
+9F F6 02 04 05 B4 01 03   03 00 01 01 04 02          ..............
+
+08 00 20 AB D4 A4 00 C0   4F 8D 93 F2 08 00 45 10    .. .....O.....E.
+00 34 ED CA 40 00 40 06   C9 40 C0 A8 01 42 C0 A8    .4..@.@..@...B..
+01 16 DD D4 00 17 B9 4E   72 40 90 7E 14 37 80 10    .......Nr@.~.7..
+16 D0 0C 01 00 00 01 01   08 0A 2B 37 9F F6 19 95    ..........+7....
+3D 50                                                =P
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D93F2
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 52
+Identification: 4662
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: C940
+Source Address: /192.168.1.66
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 8748
+Destination Port: 23
+Sequence Number: 1186041280
+Ack Number: 1870785481
+Data Offset: 8
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 0C01
+Urgent Pointer: 0
+Options: 0101080A2B379FF619953D50
+Data:
+00 C0 4F 8D 93 F2 08 00   20 AB D4 A4 08 00 45 00    ..O..... .....E.
+00 43 97 1F 40 00 3C 06   23 ED C0 A8 01 16 C0 A8    .C..@.<.#.......
+01 42 00 17 DD D4 90 7E   14 37 B9 4E 72 40 80 18    .B.....~.7.Nr@..
+C0 50 07 22 00 00 01 01   08 0A 19 95 3D 57 2B 37    .P."........=W+7
+9F F6 FF FD 18 FF FD 1F   FF FD 23 FF FD 27 FF FD    ..........#..'..
+24                                                   $
+
+08 00 20 AB D4 A4 00 C0   4F 8D 93 F2 08 00 45 10    .. .....O.....E.
+00 34 ED CB 40 00 40 06   C9 3F C0 A8 01 42 C0 A8    .4..@.@..?...B..
+01 16 DD D4 00 17 B9 4E   72 40 90 7E 14 46 80 10    .......Nr@.~.F..
+16 D0 0B E4 00 00 01 01   08 0A 2B 37 9F FD 19 95    ..........+7....
+3D 57                                                =W
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D93F2
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 52
+Identification: 4661
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: C93F
+Source Address: /192.168.1.66
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 8748
+Destination Port: 23
+Sequence Number: 1186041280
+Ack Number: 1870785466
+Data Offset: 8
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 0BE4
+Urgent Pointer: 0
+Options: 0101080A2B379FFD19953D57
+Data:
+08 00 20 AB D4 A4 00 C0   4F 8D 93 F2 08 00 45 10    .. .....O.....E.
+00 43 ED CC 40 00 40 06   C9 2F C0 A8 01 42 C0 A8    .C..@.@../...B..
+01 16 DD D4 00 17 B9 4E   72 40 90 7E 14 46 80 18    .......Nr@.~.F..
+16 D0 B4 90 00 00 01 01   08 0A 2B 37 9F FD 19 95    ..........+7....
+3D 57 FF FB 18 FF FB 1F   FF FC 23 FF FB 27 FF FC    =W........#..'..
+24                                                   $
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D93F2
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 67
+Identification: 4660
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: C92F
+Source Address: /192.168.1.66
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 8748
+Destination Port: 23
+Sequence Number: 1186041280
+Ack Number: 1870785466
+Data Offset: 8
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: B490
+Urgent Pointer: 0
+Options: 0101080A2B379FFD19953D57
+Data: FFFB18FFFB1FFFFC23FFFB27FFFC24
+00 C0 4F 8D 93 F2 08 00   20 AB D4 A4 08 00 45 00    ..O..... .....E.
+00 34 97 20 40 00 3C 06   23 FB C0 A8 01 16 C0 A8    .4. @.<.#.......
+01 42 00 17 DD D4 90 7E   14 46 B9 4E 72 4F 80 10    .B.....~.F.NrO..
+C0 50 62 53 00 00 01 01   08 0A 19 95 3D 58 2B 37    .PbS........=X+7
+9F FD                                                ..
+
+00 C0 4F 8D 93 F2 08 00   20 AB D4 A4 08 00 45 00    ..O..... .....E.
+00 46 97 21 40 00 3C 06   23 E8 C0 A8 01 16 C0 A8    .F.!@.<.#.......
+01 42 00 17 DD D4 90 7E   14 46 B9 4E 72 4F 80 18    .B.....~.F.NrO..
+C0 50 01 3C 00 00 01 01   08 0A 19 95 3D 58 2B 37    .P.<........=X+7
+9F FD FF FE 23 FF FE 24   FF FA 18 01 FF F0 FF FA    ....#..$........
+27 01 FF F0                                          '...
+
+08 00 20 AB D4 A4 00 C0   4F 8D 93 F2 08 00 45 10    .. .....O.....E.
+00 45 ED CD 40 00 40 06   C9 2C C0 A8 01 42 C0 A8    .E..@.@..,...B..
+01 16 DD D4 00 17 B9 4E   72 4F 90 7E 14 58 80 18    .......NrO.~.X..
+16 D0 23 E8 00 00 01 01   08 0A 2B 37 9F FD 19 95    ..#.......+7....
+3D 58 FF FA 18 00 4C 49   4E 55 58 FF F0 FF FA 27    =X....LINUX....'
+00 FF F0                                             ...
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D93F2
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 69
+Identification: 4659
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: C92C
+Source Address: /192.168.1.66
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 8748
+Destination Port: 23
+Sequence Number: 1186041265
+Ack Number: 1870785448
+Data Offset: 8
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 23E8
+Urgent Pointer: 0
+Options: 0101080A2B379FFD19953D58
+Data: FFFA18004C494E5558FFF0FFFA2700FFF0
+00 C0 4F 8D 93 F2 08 00   20 AB D4 A4 08 00 45 00    ..O..... .....E.
+00 34 97 22 40 00 3C 06   23 F9 C0 A8 01 16 C0 A8    .4."@.<.#.......
+01 42 00 17 DD D4 90 7E   14 58 B9 4E 72 60 80 10    .B.....~.X.Nr`..
+C0 50 62 30 00 00 01 01   08 0A 19 95 3D 58 2B 37    .Pb0........=X+7
+9F FD                                                ..
+
+00 C0 4F 8D 93 F2 08 00   20 AB D4 A4 08 00 45 00    ..O..... .....E.
+00 49 97 23 40 00 3C 06   23 E3 C0 A8 01 16 C0 A8    .I.#@.<.#.......
+01 42 00 17 DD D4 90 7E   14 58 B9 4E 72 60 80 18    .B.....~.X.Nr`..
+C0 50 B0 B7 00 00 01 01   08 0A 19 95 3D 58 2B 37    .P..........=X+7
+9F FD 0D 0A 0D 0A 53 75   6E 4F 53 20 35 2E 39 0D    ......SunOS 5.9.
+0A 0D 00 0D 0A 0D 00                                 .......
+
+08 00 20 AB D4 A4 00 C0   4F 8D 93 F2 08 00 45 10    .. .....O.....E.
+00 34 ED CE 40 00 40 06   C9 3C C0 A8 01 42 C0 A8    .4..@.@..<...B..
+01 16 DD D4 00 17 B9 4E   72 60 90 7E 14 6D 80 10    .......Nr`.~.m..
+16 D0 0B 97 00 00 01 01   08 0A 2B 37 A0 02 19 95    ..........+7....
+3D 58                                                =X
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D93F2
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 52
+Identification: 4658
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: C93C
+Source Address: /192.168.1.66
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 8748
+Destination Port: 23
+Sequence Number: 1186041248
+Ack Number: 1870785427
+Data Offset: 8
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 0B97
+Urgent Pointer: 0
+Options: 0101080A2B37A00219953D58
+Data:
+00 C0 4F 8D 93 F2 08 00   20 AB D4 A4 08 00 45 00    ..O..... .....E.
+00 3D 97 24 40 00 3C 06   23 EE C0 A8 01 16 C0 A8    .=.$@.<.#.......
+01 42 00 17 DD D4 90 7E   14 6D B9 4E 72 60 80 18    .B.....~.m.Nr`..
+C0 50 64 04 00 00 01 01   08 0A 19 95 3D 5C 2B 37    .Pd.........=\+7
+A0 02 FF FB 01 FF FB 03   FF FD 01                   ...........
+
+08 00 20 AB D4 A4 00 C0   4F 8D 93 F2 08 00 45 10    .. .....O.....E.
+00 34 ED CF 40 00 40 06   C9 3B C0 A8 01 42 C0 A8    .4..@.@..;...B..
+01 16 DD D4 00 17 B9 4E   72 60 90 7E 14 76 80 10    .......Nr`.~.v..
+16 D0 0B 8A 00 00 01 01   08 0A 2B 37 A0 02 19 95    ..........+7....
+3D 5C                                                =\
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D93F2
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 52
+Identification: 4657
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: C93B
+Source Address: /192.168.1.66
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 8748
+Destination Port: 23
+Sequence Number: 1186041248
+Ack Number: 1870785418
+Data Offset: 8
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 0B8A
+Urgent Pointer: 0
+Options: 0101080A2B37A00219953D5C
+Data:
+08 00 20 AB D4 A4 00 C0   4F 8D 93 F2 08 00 45 10    .. .....O.....E.
+00 3D ED D0 40 00 40 06   C9 31 C0 A8 01 42 C0 A8    .=..@.@..1...B..
+01 16 DD D4 00 17 B9 4E   72 60 90 7E 14 76 80 18    .......Nr`.~.v..
+16 D0 0B 7B 00 00 01 01   08 0A 2B 37 A0 02 19 95    ...{......+7....
+3D 5C FF FD 01 FF FD 03   FF FC 01                   =\.........
+
+Ethernet:
+Destination address in bytes: 080020ABD4A4
+Source Address in bytes: 00C04F8D93F2
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 61
+Identification: 4656
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: C931
+Source Address: /192.168.1.66
+Destination Address: /192.168.1.22
+Options:
+TCP
+Source Port: 8748
+Destination Port: 23
+Sequence Number: 1186041248
+Ack Number: 1870785418
+Data Offset: 8
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 0B7B
+Urgent Pointer: 0
+Options: 0101080A2B37A00219953D5C
+Data: FFFD01FFFD03FFFC01

@@ -1,0 +1,53 @@
+192.168.1.200 192.168.1.200
+/192.168.1.200
+/192.168.1.200
+Device name in Java =\Device\NPF_{4B8719D0-291B-4085-883B-828C6BB4156B}
+Device name in Java =\Device\NPF_{85B56993-5F41-4D27-ADC1-DA0AADB4D879}
+Device name in Java =\Device\NPF_{A975A761-F795-4F01-AA6D-08A2CC256C78}
+Device name in Java =\Device\NPF_{FCE08470-A4C3-4704-92DF-1A7E1A3E813A}
+Device name in Java =\Device\NPF_{44551682-400E-4504-823E-A59D720AC612}
+Adapter is open: \Device\NPF_{4B8719D0-291B-4085-883B-828C6BB4156B}
+FF FF FF FF FF FF 00 C0   4F 8D 93 CC 08 06 00 01    ........O.......
+08 00 06 04 00 01 00 C0   4F 8D 93 CC C0 A8 01 CB    ........O.......
+00 00 00 00 00 00 C0 A8   01 C8 00 00 00 00 00 00    ................
+00 00 00 00 00 00 00 00   00 00 00 00                ............
+
+
+00C04F58D994 - address
+Ethernet:
+Destination address in bytes: FFFFFFFFFFFF
+Source Address in bytes: 00C04F8D93CC
+Ethertype: arp
+Hardware Type: 1
+Protocol Type: 2048
+Hardware Address Length: 6
+Protocol Address Length: 4
+Operation: 1
+Sender Harware Address: 00C04F8D93CC
+Sender Protocol Address: /192.168.1.203
+Target Hardware Address: 000000000000
+Target Protocol Address: /192.168.1.200
+00 C0 4F 8D 93 CC 00 C0   4F 58 D9 94 08 06 00 01    ..O.....OX......
+08 00 06 04 00 02 00 C0   4F 58 D9 94 C0 A8 01 C8    ........OX......
+00 C0 4F 8D 93 CC C0 A8   01 CB 00 00 00 00 00 00    ..O.............
+00 00 00 00 00 00 00 00   00 00 00 00                ............
+
+Ethernet:
+Destination address in bytes: 00C04F8D93CC
+Source Address in bytes: 00C04F58D994
+Ethertype: arp
+Hardware Type: 1
+Protocol Type: 2048
+Hardware Address Length: 6
+Protocol Address Length: 4
+Operation: 2
+Sender Harware Address: 00C04F58D994
+Sender Protocol Address: /192.168.1.200
+Target Hardware Address: 00C04F8D93CC
+Target Protocol Address: /192.168.1.203
+00 C0 4F 8D 99 31 00 C0   4F 8D 93 F2 08 00 45 00    ..O..1..O.....E.
+00 44 DF 9C 40 00 40 11   D7 6B C0 A8 01 42 C0 A8    .D..@.@..k...B..
+01 0E 87 F8 00 35 00 30   D0 D1 E6 0D 01 00 00 01    .....5.0........
+00 00 00 00 00 00 06 69   6F 64 69 6E 65 04 73 73    .......iodine.ss
+61 63 06 75 74 75 6C 73   61 03 65 64 75 00 00 01    ac.utulsa.edu...
+00 01

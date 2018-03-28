@@ -8,30 +8,31 @@ import java.net.InetAddress;
 
 
 public class NetworkSecurityOne {
+	private static  int count = 1000;
+	private static String filename = "";
+	private static boolean isFile = false;
+	private static Scanner scan = null;
+	private static FileInputStream fis;
+	private static int filePointer = 0;
+	private static boolean saveOutput = false;
+	private static String outFileName = "";
+	private static PrintWriter writer = null;
+	private static boolean filterType = false;
+	private static String filterVal = "";
+	private static boolean filterSrc = false;
+	private static InetAddress src = null;
+	private static boolean filterDst = false;
+	private static InetAddress dst = null;
+	private static boolean sord = false;
+	private static boolean filtSPort = false;
+	private static int sPortMin = -1;
+	private static int sPortMax = -1;
+	private static boolean filtDPort = false;
+	private static int dPortMin = -1;
+	private static int dPortMax = -1;
 
 	public static void main(String[] args) {
-    int count = 1000;
-    String filename = "";
-    boolean isFile = false;
-		Scanner scan = null;
-		FileInputStream fis;
-		int filePointer = 0;
-		boolean saveOutput = false;
-		String outFileName = "";
-		PrintWriter writer = null;
-		boolean filterType = false;
-		String filterVal = "";
-		boolean filterSrc = false;
-		InetAddress src = null;
-		boolean filterDst = false;
-		InetAddress dst = null;
-		boolean sord = false;
-		boolean filtSPort = false;
-		int sPortMin = -1;
-		int sPortMax = -1;
-		boolean filtDPort = false;
-		int dPortMin = -1;
-		int dPortMax = -1;
+
 
 		SimplePacketDriver driver=new SimplePacketDriver();
 
@@ -139,8 +140,10 @@ public class NetworkSecurityOne {
 					break;
     }
 	}
+
     if(!isFile){
   		String[] adapters=driver.getAdapterNames();
+			for (int i=0; i< adapters.length; i++) System.out.println("Device name in Java ="+adapters[i]);
       if (driver.openAdapter(adapters[0])) System.out.println("Adapter is open: "+adapters[0]);
     } else {
 			try {
@@ -158,118 +161,109 @@ public class NetworkSecurityOne {
 			if(!isFile){
 	      packet = driver.readPacket();
 			} else {
-				if(scan.hasNextLine()){
+				if(scan.hasNext()){
 					String stgPacket = scan.next();
 					packet = packetReader(stgPacket);
 				}
 			}
-			//ByteBuffer Packet = ByteBuffer.wrap(packet);
-			//System.out.println("Packet: "+Packet+" with capacity: "+Packet.capacity());
-			String stringPack = driver.byteArrayToString(packet);
-			System.out.println(stringPack);
+			packetNum++;
+			//reassemble
+			analyze(packet);
+		}
+		if(saveOutput)
+			writer.close();
+	}
 
-			Ethernet ethernet = new Ethernet(packet);
-			if(filterType && filterVal.equals("eth")){
+	public static void analyze(byte[] packet){
+		Ethernet ethernet = new Ethernet(packet);
+		if(filterType && filterVal.equals("eth")){
+			if(saveOutput){
+				writer.println(outputStringify(packet) + "\r\n");
+			}
+			System.out.println(ethernet.toString());
+		}
+		String ethertype = ethernet.resolveEthertype();
+		if(ethertype == "ip"){
+			IPPacket ip = new IPPacket(packet);
+
+
+			String iptype = ip.resolveIPProtocol();
+			if(!sord && ((filterSrc && (!src.toString().equals(ip.getIp_sourceAddress().toString()))) ||
+						(filterDst && (!dst.toString().equals(ip.getIp_destAddress().toString()))))){
+				return;
+			}	else if(sord){
+				if(((!src.toString().equals(ip.getIp_sourceAddress().toString()))) &&
+							(!dst.toString().equals(ip.getIp_destAddress().toString()))){
+					return;
+				}
+			}
+			if(filterType && filterVal.equals("ip")){
 				if(saveOutput){
 					writer.println(outputStringify(packet) + "\r\n");
 				}
-				System.out.println(ethernet.toString());
+				System.out.println(ip.toString());
 			}
-			String ethertype = ethernet.resolveEthertype();
-			if(ethertype == "ip"){
-				IPPacket ip = new IPPacket(packet);
-				String iptype = ip.resolveIPProtocol();
-				if(!sord && ((filterSrc && (!src.toString().equals(ip.getIp_sourceAddress().toString()))) ||
-							(filterDst && (!dst.toString().equals(ip.getIp_destAddress().toString()))))){
-					packetNum++;
-					continue;
-				}	else if(sord){
-					if(((!src.toString().equals(ip.getIp_sourceAddress().toString()))) &&
-								(!dst.toString().equals(ip.getIp_destAddress().toString()))){
-						packetNum++;
-						continue;
-					}
-				}
-				if(filterType && filterVal.equals("ip")){
+			if(iptype == "icmp"){
+				ICMP icmp = new ICMP(packet);
+				if((!filterType) || filterVal.equals("icmp")){
 					if(saveOutput){
 						writer.println(outputStringify(packet) + "\r\n");
 					}
-					System.out.println(ip.toString());
+					System.out.println(icmp.toString());
 				}
-				if(iptype == "icmp"){
-					ICMP icmp = new ICMP(packet);
-					if((!filterType) || filterVal.equals("icmp")){
-						if(saveOutput){
-							writer.println(outputStringify(packet) + "\r\n");
-						}
-						System.out.println(icmp.toString());
-					}
+			}
+			else if(iptype == "udp"){
+				UDP udp = new UDP(packet);
+				if((filtSPort) && !((udp.getUdp_sourcePort() <= sPortMax) && (udp.getUdp_sourcePort() >= sPortMin))){
+					return;
 				}
-				else if(iptype == "udp"){
-					UDP udp = new UDP(packet);
-					if((filtSPort) && !((udp.getUdp_sourcePort() <= sPortMax) && (udp.getUdp_sourcePort() >= sPortMin))){
-						packetNum++;
-						continue;
-					}
-					if((filtDPort) && !((udp.getUdp_destinationPort() <= dPortMax) && (udp.getUdp_destinationPort() >= dPortMin))){
-						packetNum++;
-						continue;
-					}
-					if((!filterType) || filterVal.equals("udp")){
-						System.out.println(udp.toString());
-						if(saveOutput){
-							writer.println(outputStringify(packet) + "\r\n");
-						}
-					}
+				if((filtDPort) && !((udp.getUdp_destinationPort() <= dPortMax) && (udp.getUdp_destinationPort() >= dPortMin))){
+					return;
 				}
-				else if(iptype == "tcp"){
-					TCP tcp = new TCP(packet);
-					if((filtSPort) && !((tcp.getTcp_sourcePort() <= sPortMax) && (tcp.getTcp_sourcePort() >= sPortMin))){
-						packetNum++;
-						continue;
-					}
-					if((filtDPort) && !((tcp.getTcp_destinationPort() <= dPortMax) && (tcp.getTcp_destinationPort() >= dPortMin))){
-						packetNum++;
-						continue;
-					}
-					if((!filterType) || filterVal.equals("tcp")){
-						System.out.println(tcp.toString());
-						if(saveOutput){
-							writer.println(outputStringify(packet) + "\r\n");
-						}
-					}
-				}
-			} else if(ethertype == "arp"){
-				ARP a = new ARP(packet);
-				if(!sord && ((filterSrc && (!src.toString().equals(a.getArp_senderProtocolAddress().toString())))||
-				((filterDst && (!dst.toString().equals(a.getArp_targetProtocolAddress().toString())))))){
-					packetNum++;
-					continue;
-				}
-				else if(sord){
-					if((!src.toString().equals(a.getArp_senderProtocolAddress().toString())) &&
-					(!dst.toString().equals(a.getArp_targetProtocolAddress().toString()))){
-						packetNum++;
-						continue;
-					}
-				}
-				if((!filterType) || filterVal.equals("arp")){
-					System.out.println(a.toString());
+				if((!filterType) || filterVal.equals("udp")){
+					System.out.println(udp.toString());
 					if(saveOutput){
 						writer.println(outputStringify(packet) + "\r\n");
 					}
 				}
-			} else{
-				System.out.println("Unimplemented type (not sure if you want this printed)\n");
-				//if(saveOutput){
-				//	writer.println(outputStringify(packet) + "\r\n");
-				//}
 			}
-			packetNum++;
+			else if(iptype == "tcp"){
+				TCP tcp = new TCP(packet);
+				if((filtSPort) && !((tcp.getTcp_sourcePort() <= sPortMax) && (tcp.getTcp_sourcePort() >= sPortMin))){
+					return;
+				}
+				if((filtDPort) && !((tcp.getTcp_destinationPort() <= dPortMax) && (tcp.getTcp_destinationPort() >= dPortMin))){
+					return;
+				}
+				if((!filterType) || filterVal.equals("tcp")){
+					System.out.println(tcp.toString());
+					if(saveOutput){
+						writer.println(outputStringify(packet) + "\r\n");
+					}
+				}
+			}
+		} else if(ethertype == "arp"){
+			ARP a = new ARP(packet);
+			if(!sord && ((filterSrc && (!src.toString().equals(a.getArp_senderProtocolAddress().toString())))||
+			((filterDst && (!dst.toString().equals(a.getArp_targetProtocolAddress().toString())))))){
+				return;
+			}
+			else if(sord){
+				if((!src.toString().equals(a.getArp_senderProtocolAddress().toString())) &&
+				(!dst.toString().equals(a.getArp_targetProtocolAddress().toString()))){
+					return;
+				}
+			}
+			if((!filterType) || filterVal.equals("arp")){
+				System.out.println(a.toString());
+				if(saveOutput){
+					writer.println(outputStringify(packet) + "\r\n");
+				}
+			}
+		} else{
+			System.out.println("Unimplemented type!\n");
 		}
-		writer.close();
 	}
-
 
 	public static String bytesToHex(byte[] bytes) {
 		char[] hexArray = "0123456789ABCDEF".toCharArray();
