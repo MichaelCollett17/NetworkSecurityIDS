@@ -18,7 +18,6 @@ public class Reassembler{
       AssembledTriple at = searchList(ident);
       if(at == null){
         at = new AssembledTriple();
-        at.setIdentification(ident);
         boolean done = at.addIPFrag(packet);
         if(done){
           return at;
