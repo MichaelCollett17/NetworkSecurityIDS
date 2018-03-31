@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.math.BigInteger;
 
 public class AssembledTriple{
   final int arp = 0;//zero, arp, one packet list
@@ -58,6 +58,7 @@ public class AssembledTriple{
     if(!mf){
       //set assembledPacket Length
       assembledPacket = new byte[fragLast];
+      assembledLength = fragLast -14;
       //take all frags and write em
       writeFrags();
     }
@@ -84,6 +85,19 @@ public class AssembledTriple{
           holes.add(new HoleDescriptor(fragLast + 1, hole.getLast()));
         }
         if(holes.size() == 0){
+          if(assembledLength > 65535){
+            setSID(oversized);
+            return true;
+          }
+          //16&17 are the bytes for total length. Must be rewritten WATCH OUT BIG ENDIAN
+          byte[] aLen = BigInteger.valueOf(assembledLength).toByteArray();
+          assembledPacket[17] = aLen[0];
+          if(aLen.length == 1){
+            assembledPacket[16] = 0;
+          } else {
+            assembledPacket[16] = aLen[1];
+          }
+
           if(overwrote){
             setSID(correct_overlap);
           } else{

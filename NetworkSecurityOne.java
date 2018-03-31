@@ -30,6 +30,7 @@ public class NetworkSecurityOne {
 	private static boolean filtDPort = false;
 	private static int dPortMin = -1;
 	private static int dPortMax = -1;
+	private static long timeout = 20000;
 
 	public static void main(String[] args) {
 
@@ -132,6 +133,10 @@ public class NetworkSecurityOne {
 					idx++;
 					dPortMax = Integer.parseInt(args[idx]);
 					break;
+				case "-timeout":
+					idx++;
+					timeout = Integer.parseInt(args[idx]);
+					break;
     }
 	}
 
@@ -165,8 +170,17 @@ public class NetworkSecurityOne {
 			AssembledTriple at = reassembler.processFragment(packet);
 			if(at == null){
 			}
+			else if(at.getSID() == -10){
+				System.out.println("Packet Dropped Due to False Checksum");
+			}
 			else if((at.getSID() == 0)|(at.getSID() == 1)|(at.getSID() == 2)){
 				analyze(at.getAssembledPacket());
+			}
+			else if(at.getSID() == 3){
+				System.out.println("Warning: Oversized Packet");
+			}
+			else if(at.getSID() == 4){
+				//timedout
 			}
 		}
 		if(saveOutput)
@@ -185,8 +199,6 @@ public class NetworkSecurityOne {
 		String ethertype = ethernet.resolveEthertype();
 		if(ethertype.equals("ip")){
 			IPPacket ip = new IPPacket(packet);
-
-
 			String iptype = ip.resolveIPProtocol();
 			if(!sord && ((filterSrc && (!src.toString().equals(ip.getIp_sourceAddress().toString()))) ||
 						(filterDst && (!dst.toString().equals(ip.getIp_destAddress().toString()))))){

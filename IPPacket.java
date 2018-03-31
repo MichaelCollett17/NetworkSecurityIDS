@@ -235,6 +235,10 @@ public class IPPacket extends Ethernet {
 		return ip_checksum;
 	}
 
+  public long getLongChecksum(){
+    return new BigInteger(getIp_checksum()).longValue();
+  }
+
 	/**
 	* Sets new value of ip_checksum
 	* @param
@@ -313,5 +317,19 @@ public class IPPacket extends Ethernet {
 
   public static int byteToUnsignedInt(byte b) {
     return 0x00 << 24 | b & 0xff;
+  }
+
+    public long checksum() {
+      byte[] buf = Arrays.copyOfRange(ip_packet,0,(getIp_IHL()*4));
+      int length = buf.length;
+      int i = 0;
+      long sum = 0;
+      while (length > 0) {
+        sum += (buf[i++]&0xff) << 8;
+        if ((--length)==0) break;
+        sum += (buf[i++]&0xff);
+        --length;
+    }
+    return (~((sum & 0xFFFF)+(sum >> 16)))&0xFFFF;
   }
 }

@@ -14,6 +14,11 @@ public class Reassembler{
     String etype = e.resolveEthertype();
     if(etype.equals("ip")){
       IPPacket ip = new IPPacket(packet);
+      //check IP checksum
+      if(ip.getLongChecksum() != ip.getLongChecksum()){
+        return new AssembledTriple(-10,-1,new byte[0]);
+      }
+
       int ident = ip.getIp_identification();
       AssembledTriple at = searchList(ident);
       if(at == null){
