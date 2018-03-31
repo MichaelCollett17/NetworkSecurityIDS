@@ -68,7 +68,6 @@ public class NetworkSecurityOne {
 					filterSrc = true;
 					try{
 						src = InetAddress.getByName(args[idx]);
-						System.out.println(src.toString());
 					} catch(Exception e){
 						e.printStackTrace();
 					}
@@ -78,7 +77,6 @@ public class NetworkSecurityOne {
 					filterDst = true;
 					try{
 						dst = InetAddress.getByName(args[idx]);
-						System.out.println(dst.toString());
 					} catch(Exception e){
 						e.printStackTrace();
 					}
@@ -90,7 +88,6 @@ public class NetworkSecurityOne {
 					filterSrc = true;
 					try{
 						src = InetAddress.getByName(args[idx]);
-						System.out.println(src.toString());
 					} catch(Exception e){
 						e.printStackTrace();
 					}
@@ -99,7 +96,6 @@ public class NetworkSecurityOne {
 					filterDst = true;
 					try{
 						dst = InetAddress.getByName(args[idx]);
-						System.out.println(dst.toString());
 					} catch(Exception e){
 						e.printStackTrace();
 					}
@@ -110,7 +106,6 @@ public class NetworkSecurityOne {
 					filterSrc = true;
 					try{
 						src = InetAddress.getByName(args[idx]);
-						System.out.println(src.toString());
 					} catch(Exception e){
 						e.printStackTrace();
 					}
@@ -119,7 +114,6 @@ public class NetworkSecurityOne {
 					filterDst = true;
 					try{
 						dst = InetAddress.getByName(args[idx]);
-						System.out.println(dst.toString());
 					} catch(Exception e){
 						e.printStackTrace();
 					}
@@ -181,7 +175,6 @@ public class NetworkSecurityOne {
 
 	public static void analyze(byte[] packet){
 		SimplePacketDriver driver = new SimplePacketDriver();
-		System.out.println(driver.byteArrayToString(packet));
 		Ethernet ethernet = new Ethernet(packet);
 		if(filterType && filterVal.equals("eth")){
 			if(saveOutput){

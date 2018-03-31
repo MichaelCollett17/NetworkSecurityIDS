@@ -36,6 +36,9 @@ public class AssembledTriple{
   //preference to overwriting new data (like linux)
   public boolean addIPFrag(byte[] packet){
     IPPacket ip = new IPPacket(packet);
+    if((ip.getIp_fragmentOffset() == 1) && (ip.resolveIPProtocol().equals("tcp"))){
+      System.out.println("WARNING: Offset of 1 on tcp packet\nThis likely indicates an attempt to break-up the tor overwrite a tcp header!");
+    }
     this.fragments.add(packet);
     int totalLength = ip.getIp_length() + 14;//14 for ethernet header
     int dataLength = ip.getIp_length() - (ip.getIp_IHL() * 4);
@@ -74,19 +77,13 @@ public class AssembledTriple{
       }
       else{
         holes.remove(i);
-        System.out.println("********\nMF: " + mf + "\nholefirst: " + hole.getFirst()
-          + "\nHoleLast: " + hole.getLast() + "\nFragLast " + fragLast +
-          "\nFragFirst: " + fragFirst + assembledPacket);
         if(fragFirst > hole.getFirst()){
-          System.out.println("a");
           holes.add(new HoleDescriptor(hole.getFirst(), fragFirst));
         }
         if((fragLast < hole.getLast()) && mf){
-          System.out.println("b");
           holes.add(new HoleDescriptor(fragLast + 1, hole.getLast()));
         }
         if(holes.size() == 0){
-          System.out.println("c");
           if(overwrote){
             setSID(correct_overlap);
           } else{
@@ -114,13 +111,7 @@ public class AssembledTriple{
           assembledPacket[i] = packet[i];
       }
 
-      if(ip.get_Ip_fragmentOffset() == 1){
-        System.out.println("WARNING: Offset of 1\nThis may");
-      }
       //write data for all of them
-      System.out.println(offset);
-      System.out.println(offset+dataLength);
-      System.out.println(assembledPacket.length);
       for(int index = offset; index < offset+dataLength; index++){
         assembledPacket[index] = packet[headerLength];
         headerLength++;
