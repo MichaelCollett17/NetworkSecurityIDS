@@ -4,12 +4,25 @@ import java.util.List;
 public class Reassembler{
 
   private static List<AssembledTriple>  unassembledTriples;
+  private static List<Timeout> unfinished;
+  private long timeout;
 
-  public Reassembler(){
+  public Reassembler(long timeo){
     unassembledTriples = new ArrayList<AssembledTriple>();
+    unfinished = new ArrayList<Timeout>();
+    timeout = timeo;
   }
 
   public AssembledTriple processFragment(byte[] packet){
+    //check timeouts
+    for(int i = 0; i < unfinished.size(); i++){
+      if(unfinished.get(i).isTimedOut){
+        unfinished.get(i).complete();
+        unfinished.remove(i);
+        
+      }
+    }
+
     Ethernet e = new Ethernet(packet);
     String etype = e.resolveEthertype();
     if(etype.equals("ip")){
@@ -29,6 +42,12 @@ public class Reassembler{
         }
         else{
           unassembledTriples.add(at);
+          AtomicBoolean timedOut = new AtomicBoolean(false);
+          AtomicBoolean incomplete = new AtomicBoolean(true);
+          Timeout t = new Timeout(timeout, timedOut, incomplete, ident);
+          Thread timeoutChecker = new Thread(t);
+          timeoutChecker.start();
+          unfinished.add(timeoutChecker);
           return null;
         }
       }
@@ -36,6 +55,12 @@ public class Reassembler{
         unassembledTriples.remove(at);
         boolean fin = at.addIPFrag(packet);
         if(fin){
+          for(int idx = 0; idx < unfinished.size(); idx++){
+            if(at.getIdentification() == (unfinished.get(idx).getIdent())){
+              unfinished.get(idx).complete();
+              unfinished.remove(idx);
+            }
+          }
           return at;
         }
         else{

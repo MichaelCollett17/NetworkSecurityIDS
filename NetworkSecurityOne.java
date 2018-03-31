@@ -154,7 +154,7 @@ public class NetworkSecurityOne {
 			}
 		}
 
-		Reassembler reassembler = new Reassembler();
+		Reassembler reassembler = new Reassembler(timeout);
 		int packetNum = 0;
     while((packetNum<count) && (!isFile || (scan.hasNext()))){
 			byte [] packet = null;
