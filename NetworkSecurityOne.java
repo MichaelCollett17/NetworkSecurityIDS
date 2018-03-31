@@ -180,6 +180,8 @@ public class NetworkSecurityOne {
 	}
 
 	public static void analyze(byte[] packet){
+		SimplePacketDriver driver = new SimplePacketDriver();
+		System.out.println(driver.byteArrayToString(packet));
 		Ethernet ethernet = new Ethernet(packet);
 		if(filterType && filterVal.equals("eth")){
 			if(saveOutput){
