@@ -13,16 +13,26 @@ public class Reassembler{
     timeout = timeo;
   }
 
-  public AssembledTriple processFragment(byte[] packet){
+  public AssembledTriple checkTimeouts(){
     //check timeouts
     for(int i = 0; i < unfinished.size(); i++){
-      if(unfinished.get(i).isTimedOut){
+      if(unfinished.get(i).isTimedOut()){
         unfinished.get(i).complete();
+        int tempIdent = unfinished.get(i).getIdent();
         unfinished.remove(i);
-        
+        for(AssembledTriple at: unassembledTriples){
+          if(at.getIdentification() == tempIdent){
+            unassembledTriples.remove(at);
+            at.setSID(4);//4 is timedOut
+            return at;
+          }
+        }
       }
     }
+    return null;
+  }
 
+  public AssembledTriple processFragment(byte[] packet){
     Ethernet e = new Ethernet(packet);
     String etype = e.resolveEthertype();
     if(etype.equals("ip")){
