@@ -15,9 +15,9 @@ public class Timeout implements Runnable {
   }
 
   public void run(){
-    while(incomplete){
+    while(incomplete.get()){
       if(System.currentTimeMillis() > timeoutTime){
-        timedOut = true;
+        timedOut.set(true);
         return;
       }
     }

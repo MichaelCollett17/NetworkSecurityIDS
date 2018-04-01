@@ -182,19 +182,19 @@ public class NetworkSecurityOne {
 			else if(at.getSID() == 4){
 				//timedout
 			}
-			AssembledTriple at = reassembler.checkTimeouts(packet);
-			if(at == null){
+			AssembledTriple at_ = reassembler.checkTimeouts();
+			if(at_ == null){
 			}
-			else if(at.getSID() == -10){
+			else if(at_.getSID() == -10){
 				System.out.println("Packet Dropped Due to False Checksum");
 			}
-			else if((at.getSID() == 0)|(at.getSID() == 1)|(at.getSID() == 2)){
-				analyze(at.getAssembledPacket());
+			else if((at_.getSID() == 0)|(at.getSID() == 1)|(at.getSID() == 2)){
+				analyze(at_.getAssembledPacket());
 			}
-			else if(at.getSID() == 3){
+			else if(at_.getSID() == 3){
 				System.out.println("Warning: Oversized Packet");
 			}
-			else if(at.getSID() == 4){
+			else if(at_.getSID() == 4){
 				System.out.println("Fragments Timed Out");
 			}
 		}

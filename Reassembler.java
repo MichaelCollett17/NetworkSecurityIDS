@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 
 public class Reassembler{
 
@@ -57,7 +59,7 @@ public class Reassembler{
           Timeout t = new Timeout(timeout, timedOut, incomplete, ident);
           Thread timeoutChecker = new Thread(t);
           timeoutChecker.start();
-          unfinished.add(timeoutChecker);
+          unfinished.add(t);
           return null;
         }
       }
