@@ -1,0 +1,5850 @@
+
+C:\Users\micha\Documents\projectOneNetSec\NetworkSPFG>java NetworkSecurityOne -timeout -2000 -r telnet.frag.4.dat -o asdfghjkl.dat
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 48
+Identification: 1943
+DF: false
+MF: true
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 49A6
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853832
+Ack Number: 0
+Data Offset: 7
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16384
+Checksum: D05A
+Urgent Pointer: 0
+Options: 020405B401010402
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 48
+Identification: 0
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: 7139
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133425
+Ack Number: 1620853833
+Data Offset: 7
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: EDC6
+Urgent Pointer: 0
+Options: 020405B401010402
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1944
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 69A9
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853833
+Ack Number: 583133426
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17520
+Checksum: ECEA
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 52
+Identification: 32216
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F34C
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133426
+Ack Number: 1620853833
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: E333
+Urgent Pointer: 0
+Options:
+Data: FFFD18FFFD20FFFD23FFFD27
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 46
+Identification: 1945
+DF: false
+MF: true
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 49A4
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853833
+Ack Number: 583133438
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17508
+Checksum: D8C1
+Urgent Pointer: 0
+Options:
+Data: FFFB18FFFB1F
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32217
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F357
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133438
+Ack Number: 1620853839
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1A79
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 43
+Identification: 32218
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F353
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133438
+Ack Number: 1620853839
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: FB6F
+Urgent Pointer: 0
+Options:
+Data: FFFD1F
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 49
+Identification: 1946
+DF: false
+MF: true
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 49A3
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853839
+Ack Number: 583133438
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17508
+Checksum: A8B6
+Urgent Pointer: 0
+Options:
+Data: FFFC20FFFC23FFFC27
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32219
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F355
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133441
+Ack Number: 1620853848
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1A6D
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 52
+Identification: 1947
+DF: false
+MF: true
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 49A2
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853848
+Ack Number: 583133441
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17505
+Checksum: D252
+Urgent Pointer: 0
+Options:
+Data: FFFB1FFFFA1F00500019FFF0
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 46
+Identification: 32220
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F34E
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133441
+Ack Number: 1620853860
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 0266
+Urgent Pointer: 0
+Options:
+Data: FFFA1801FFF0
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 50
+Identification: 1948
+DF: false
+MF: true
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 49A1
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853860
+Ack Number: 583133447
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17499
+Checksum: 403A
+Urgent Pointer: 0
+Options:
+Data: FFFA1800414E5349FFF0
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 52
+Identification: 32221
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F347
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133447
+Ack Number: 1620853870
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1623
+Urgent Pointer: 0
+Options:
+Data: FFFB03FFFD01FFFB05FFFD21
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 43
+Identification: 1949
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 69A1
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853870
+Ack Number: 583133459
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17487
+Checksum: E9BC
+Urgent Pointer: 0
+Options:
+Data: FFFD03
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32222
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F352
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133459
+Ack Number: 1620853873
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1A42
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 49
+Identification: 1950
+DF: false
+MF: true
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 499F
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853873
+Ack Number: 583133459
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 17487
+Checksum: CBB3
+Urgent Pointer: 0
+Options:
+Data: FFFB01FFFE05FFFC21
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32223
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F351
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133459
+Ack Number: 1620853882
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1A39
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 6915
+Identification: 32224
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F05D
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583133459
+Ack Number: 1620853882
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: D305
+Urgent Pointer: 0
+Options:
+Data: FFFE01FFFB012A2A2A2A57656C636F6D6520746F20746865204E6574776F726B2053656375726974792074656C6E6574207365727665722A2A2A2A0D0A5468697320636F6D70757465722073797374656D20696E636C7564696E6720616C6C2072656C617465642065717569706D656E742C206E6574776F726B732C20616E640D0A6E6574776F726B20646576696365732C206172652070726F7669646564206F6E6C7920666F7220617574686F72697A6564207573652E20205468697320636F6D70757465720D0A73797374656D206D6179206265206D6F6E69746F72656420666F7220616C6C206C617766756C20707572706F7365732C20696E636C7564696E6720746F20656E7375726520746861740D0A75736520697320617574686F72697A65642C20666F72206D616E6167656D656E74206F66207468652073797374656D2C20746F20666163696C69746174652070726F74656374696F6E0D0A616761696E737420756E617574686F72697A6564206163636573732C20616E6420746F207665726966792073656375726974792070726F636564757265732C200D0A7375727669766162696C69747920616E64206F7065726174696F6E616C2073656375726974792E2020447572696E67206D6F6E69746F72696E6720696E666F726D6174696F6E206D61790D0A6265206578616D696E65642C207265636F726465642C20636F7069656420616E64207573656420666F7220617574686F72697A656420707572706F7365732E2020416C6C200D0A696E666F726D6174696F6E2C20696E636C7564696E6720706572736F6E616C20696E666F726D6174696F6E20706C61636564206F6E206F722073656E74206F76657220746869730D0A73797374656D206D6179206265206D6F6E69746F7265642E2020556E617574686F72697A656420757365206D6179207375626A65637420796F7520746F206372696D696E616C200D0A70726F7365637574696F6E2E0D0A0D0A5468616E6B20796F752C20686176652061206E696365204461792E0D0A
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 43
+Identification: 1951
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 699F
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853882
+Ack Number: 583134214
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16732
+Checksum: EBB1
+Urgent Pointer: 0
+Options:
+Data: FFFC01
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 47
+Identification: 32225
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F348
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134214
+Ack Number: 1620853885
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: B520
+Urgent Pointer: 0
+Options:
+Data: 6C6F67696E3A20
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 43
+Identification: 1952
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 699E
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853885
+Ack Number: 583134221
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16725
+Checksum: EBAD
+Urgent Pointer: 0
+Options:
+Data: FFFD01
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32226
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F34E
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134221
+Ack Number: 1620853888
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1739
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1953
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 699F
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853888
+Ack Number: 583134221
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16725
+Checksum: 78AA
+Urgent Pointer: 0
+Options:
+Data: 74
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32227
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F34D
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134221
+Ack Number: 1620853889
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1738
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32228
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F34B
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134221
+Ack Number: 1620853889
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: A32E
+Urgent Pointer: 0
+Options:
+Data: 74
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1954
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 699E
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853889
+Ack Number: 583134222
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16724
+Checksum: 87A9
+Urgent Pointer: 0
+Options:
+Data: 65
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32229
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F34A
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134222
+Ack Number: 1620853890
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: B22C
+Urgent Pointer: 0
+Options:
+Data: 65
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1955
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 699E
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853890
+Ack Number: 583134223
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16723
+Checksum: ECB1
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1956
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 699C
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853890
+Ack Number: 583134223
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16723
+Checksum: 79A8
+Urgent Pointer: 0
+Options:
+Data: 73
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32230
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F349
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134223
+Ack Number: 1620853891
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: A42A
+Urgent Pointer: 0
+Options:
+Data: 73
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1957
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 699B
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853891
+Ack Number: 583134224
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16722
+Checksum: 78A7
+Urgent Pointer: 0
+Options:
+Data: 74
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32231
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F348
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134224
+Ack Number: 1620853892
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: A328
+Urgent Pointer: 0
+Options:
+Data: 74
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1958
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 699B
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853892
+Ack Number: 583134225
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16721
+Checksum: ECAF
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 42
+Identification: 1959
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6998
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853892
+Ack Number: 583134225
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16721
+Checksum: DF9B
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 42
+Identification: 32232
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F346
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134225
+Ack Number: 1620853894
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 0A1B
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1960
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6999
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853894
+Ack Number: 583134227
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16719
+Checksum: ECAD
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 50
+Identification: 32233
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F33D
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134227
+Ack Number: 1620853894
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 2F52
+Urgent Pointer: 0
+Options:
+Data: 50617373776F72643A20
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1961
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6998
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853894
+Ack Number: 583134237
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16709
+Checksum: ECAD
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1962
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6996
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853894
+Ack Number: 583134237
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16709
+Checksum: 7CA4
+Urgent Pointer: 0
+Options:
+Data: 70
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32234
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F346
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134237
+Ack Number: 1620853895
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1722
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1963
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6995
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853895
+Ack Number: 583134237
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16709
+Checksum: 8BA3
+Urgent Pointer: 0
+Options:
+Data: 61
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32235
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F345
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134237
+Ack Number: 1620853896
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1721
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1964
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6994
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853896
+Ack Number: 583134237
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16709
+Checksum: 79A2
+Urgent Pointer: 0
+Options:
+Data: 73
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32236
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F344
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134237
+Ack Number: 1620853897
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1720
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1965
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6993
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853897
+Ack Number: 583134237
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16709
+Checksum: 79A1
+Urgent Pointer: 0
+Options:
+Data: 73
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32237
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F343
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134237
+Ack Number: 1620853898
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 171F
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 42
+Identification: 1966
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6991
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853898
+Ack Number: 583134237
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16709
+Checksum: DF95
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32238
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F342
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134237
+Ack Number: 1620853900
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 171D
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 42
+Identification: 32239
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F33F
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134237
+Ack Number: 1620853900
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 0A09
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1967
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6992
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853900
+Ack Number: 583134239
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16707
+Checksum: ECA7
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 66
+Identification: 32240
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F326
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134239
+Ack Number: 1620853900
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: B4CF
+Urgent Pointer: 0
+Options:
+Data: 4C6F67696E20696E636F72726563740D0A0D0A6C6F67696E3A20
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1968
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6991
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853900
+Ack Number: 583134265
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16681
+Checksum: ECA7
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1969
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 698F
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853900
+Ack Number: 583134265
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16681
+Checksum: 809E
+Urgent Pointer: 0
+Options:
+Data: 6C
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32241
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F33E
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134265
+Ack Number: 1620853901
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: AAF6
+Urgent Pointer: 0
+Options:
+Data: 6C
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1970
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 698F
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853901
+Ack Number: 583134266
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16680
+Checksum: ECA6
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1971
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 698D
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853901
+Ack Number: 583134266
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16680
+Checksum: 7D9D
+Urgent Pointer: 0
+Options:
+Data: 6F
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32242
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F33D
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134266
+Ack Number: 1620853902
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: A7F4
+Urgent Pointer: 0
+Options:
+Data: 6F
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1972
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 698C
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853902
+Ack Number: 583134267
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16679
+Checksum: 859C
+Urgent Pointer: 0
+Options:
+Data: 67
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32243
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F33C
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134267
+Ack Number: 1620853903
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: AFF2
+Urgent Pointer: 0
+Options:
+Data: 67
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1973
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 698B
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853903
+Ack Number: 583134268
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16678
+Checksum: 839B
+Urgent Pointer: 0
+Options:
+Data: 69
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32244
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F33B
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134268
+Ack Number: 1620853904
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: ADF0
+Urgent Pointer: 0
+Options:
+Data: 69
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1974
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 698A
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853904
+Ack Number: 583134269
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16677
+Checksum: 7E9A
+Urgent Pointer: 0
+Options:
+Data: 6E
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32245
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F33A
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134269
+Ack Number: 1620853905
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: A8EE
+Urgent Pointer: 0
+Options:
+Data: 6E
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1975
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 698A
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853905
+Ack Number: 583134270
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16676
+Checksum: ECA2
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 42
+Identification: 1976
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6987
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853905
+Ack Number: 583134270
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16676
+Checksum: DF8E
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 42
+Identification: 32246
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F338
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134270
+Ack Number: 1620853907
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 09E1
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1977
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6988
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853907
+Ack Number: 583134272
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16674
+Checksum: ECA0
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 50
+Identification: 32247
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F32F
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134272
+Ack Number: 1620853907
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 2F18
+Urgent Pointer: 0
+Options:
+Data: 50617373776F72643A20
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1978
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6987
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853907
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: ECA0
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1979
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6985
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853907
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: 7C97
+Urgent Pointer: 0
+Options:
+Data: 70
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32248
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F338
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853908
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16E8
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1980
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6984
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853908
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: 8B96
+Urgent Pointer: 0
+Options:
+Data: 61
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32249
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F337
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853909
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16E7
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1981
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6983
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853909
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: 7995
+Urgent Pointer: 0
+Options:
+Data: 73
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32250
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F336
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853910
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16E6
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1982
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6982
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853910
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: 7994
+Urgent Pointer: 0
+Options:
+Data: 73
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32251
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F335
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853911
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16E5
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1983
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6981
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853911
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: 7593
+Urgent Pointer: 0
+Options:
+Data: 77
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32252
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F334
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853912
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16E4
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1984
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6980
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853912
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: 7D92
+Urgent Pointer: 0
+Options:
+Data: 6F
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32253
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F333
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853913
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16E3
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1985
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 697F
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853913
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: 7A91
+Urgent Pointer: 0
+Options:
+Data: 72
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32254
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F332
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853914
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16E2
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1986
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 697E
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853914
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: 8890
+Urgent Pointer: 0
+Options:
+Data: 64
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32255
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F331
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853915
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16E1
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 42
+Identification: 1987
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 697C
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853915
+Ack Number: 583134282
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16664
+Checksum: DF84
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32256
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F330
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853917
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16DF
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 42
+Identification: 32257
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F32D
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134282
+Ack Number: 1620853917
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 09CB
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1988
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 697D
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853917
+Ack Number: 583134284
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16662
+Checksum: EC96
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 66
+Identification: 32258
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F314
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134284
+Ack Number: 1620853917
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: B491
+Urgent Pointer: 0
+Options:
+Data: 4C6F67696E20696E636F72726563740D0A0D0A6C6F67696E3A20
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1989
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 697C
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853917
+Ack Number: 583134310
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16636
+Checksum: EC96
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1990
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 697A
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853917
+Ack Number: 583134310
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16636
+Checksum: 7B8D
+Urgent Pointer: 0
+Options:
+Data: 71
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32259
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F32C
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134310
+Ack Number: 1620853918
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: A5B8
+Urgent Pointer: 0
+Options:
+Data: 71
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1991
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 697A
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853918
+Ack Number: 583134311
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16635
+Checksum: EC95
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1992
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6978
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853918
+Ack Number: 583134311
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16635
+Checksum: 758C
+Urgent Pointer: 0
+Options:
+Data: 77
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32260
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F32B
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134311
+Ack Number: 1620853919
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 9FB6
+Urgent Pointer: 0
+Options:
+Data: 77
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1993
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6978
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853919
+Ack Number: 583134312
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16634
+Checksum: EC94
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1994
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6976
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853919
+Ack Number: 583134312
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16634
+Checksum: 878B
+Urgent Pointer: 0
+Options:
+Data: 65
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32261
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F32A
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134312
+Ack Number: 1620853920
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: B1B4
+Urgent Pointer: 0
+Options:
+Data: 65
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1995
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6976
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853920
+Ack Number: 583134313
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16633
+Checksum: EC93
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1996
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6974
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853920
+Ack Number: 583134313
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16633
+Checksum: 7A8A
+Urgent Pointer: 0
+Options:
+Data: 72
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32262
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F329
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134313
+Ack Number: 1620853921
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: A4B2
+Urgent Pointer: 0
+Options:
+Data: 72
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1997
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6974
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853921
+Ack Number: 583134314
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16632
+Checksum: EC92
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 1998
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6972
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853921
+Ack Number: 583134314
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16632
+Checksum: 7889
+Urgent Pointer: 0
+Options:
+Data: 74
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32263
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F328
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134314
+Ack Number: 1620853922
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: A2B0
+Urgent Pointer: 0
+Options:
+Data: 74
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 1999
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6972
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853922
+Ack Number: 583134315
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16631
+Checksum: EC91
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2000
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6970
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853922
+Ack Number: 583134315
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16631
+Checksum: 7388
+Urgent Pointer: 0
+Options:
+Data: 79
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32264
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F327
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134315
+Ack Number: 1620853923
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 9DAE
+Urgent Pointer: 0
+Options:
+Data: 79
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2001
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6970
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853923
+Ack Number: 583134316
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16630
+Checksum: EC90
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 42
+Identification: 2002
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 696D
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853923
+Ack Number: 583134316
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16630
+Checksum: DF7C
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 42
+Identification: 32265
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F325
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134316
+Ack Number: 1620853925
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 09A1
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2003
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 696E
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853925
+Ack Number: 583134318
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16628
+Checksum: EC8E
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 50
+Identification: 32266
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F31C
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134318
+Ack Number: 1620853925
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 2ED8
+Urgent Pointer: 0
+Options:
+Data: 50617373776F72643A20
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2004
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 696D
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853925
+Ack Number: 583134328
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16618
+Checksum: EC8E
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2005
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 696B
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853925
+Ack Number: 583134328
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16618
+Checksum: 8585
+Urgent Pointer: 0
+Options:
+Data: 67
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32267
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F325
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134328
+Ack Number: 1620853926
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16A8
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2006
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 696A
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853926
+Ack Number: 583134328
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16618
+Checksum: 7784
+Urgent Pointer: 0
+Options:
+Data: 75
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32268
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F324
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134328
+Ack Number: 1620853927
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16A7
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2007
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6969
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853927
+Ack Number: 583134328
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16618
+Checksum: 8783
+Urgent Pointer: 0
+Options:
+Data: 65
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32269
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F323
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134328
+Ack Number: 1620853928
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16A6
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2008
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6968
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853928
+Ack Number: 583134328
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16618
+Checksum: 7982
+Urgent Pointer: 0
+Options:
+Data: 73
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32270
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F322
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134328
+Ack Number: 1620853929
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16A5
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2009
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6967
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853929
+Ack Number: 583134328
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16618
+Checksum: 7881
+Urgent Pointer: 0
+Options:
+Data: 74
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32271
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F321
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134328
+Ack Number: 1620853930
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16A4
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 42
+Identification: 2010
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6965
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853930
+Ack Number: 583134328
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16618
+Checksum: DF75
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32272
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F320
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134328
+Ack Number: 1620853932
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 16A2
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 42
+Identification: 32273
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F31D
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134328
+Ack Number: 1620853932
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 098E
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2011
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6966
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853932
+Ack Number: 583134330
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16616
+Checksum: EC87
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 66
+Identification: 32274
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F304
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134330
+Ack Number: 1620853932
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: B454
+Urgent Pointer: 0
+Options:
+Data: 4C6F67696E20696E636F72726563740D0A0D0A6C6F67696E3A20
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2012
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6965
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853932
+Ack Number: 583134356
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16590
+Checksum: EC87
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2013
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6963
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853932
+Ack Number: 583134356
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16590
+Checksum: 857E
+Urgent Pointer: 0
+Options:
+Data: 67
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32275
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F31C
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134356
+Ack Number: 1620853933
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: AF7B
+Urgent Pointer: 0
+Options:
+Data: 67
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2014
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6962
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853933
+Ack Number: 583134357
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16589
+Checksum: 7D7D
+Urgent Pointer: 0
+Options:
+Data: 6F
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32276
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F31B
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134357
+Ack Number: 1620853934
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: A779
+Urgent Pointer: 0
+Options:
+Data: 6F
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2015
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6962
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853934
+Ack Number: 583134358
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16588
+Checksum: EC85
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2016
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6960
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853934
+Ack Number: 583134358
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16588
+Checksum: 887C
+Urgent Pointer: 0
+Options:
+Data: 64
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 41
+Identification: 32277
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F31A
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134358
+Ack Number: 1620853935
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: B277
+Urgent Pointer: 0
+Options:
+Data: 64
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2017
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6960
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853935
+Ack Number: 583134359
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16587
+Checksum: EC84
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 42
+Identification: 2018
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 695D
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853935
+Ack Number: 583134359
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16587
+Checksum: DF70
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 42
+Identification: 32278
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F318
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134359
+Ack Number: 1620853937
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 096A
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2019
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 695E
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853937
+Ack Number: 583134361
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16585
+Checksum: EC82
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 50
+Identification: 32279
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F30F
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134361
+Ack Number: 1620853937
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 2EA1
+Urgent Pointer: 0
+Options:
+Data: 50617373776F72643A20
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2020
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 695D
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853937
+Ack Number: 583134371
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16575
+Checksum: EC82
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2021
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 695B
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853937
+Ack Number: 583134371
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16575
+Checksum: 8579
+Urgent Pointer: 0
+Options:
+Data: 67
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32280
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F318
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134371
+Ack Number: 1620853938
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1671
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2022
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 695A
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853938
+Ack Number: 583134371
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16575
+Checksum: 7D78
+Urgent Pointer: 0
+Options:
+Data: 6F
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32281
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F317
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134371
+Ack Number: 1620853939
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1670
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 41
+Identification: 2023
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6959
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853939
+Ack Number: 583134371
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16575
+Checksum: 8877
+Urgent Pointer: 0
+Options:
+Data: 64
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32282
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F316
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134371
+Ack Number: 1620853940
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 166F
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 42
+Identification: 2024
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6957
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853940
+Ack Number: 583134371
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16575
+Checksum: DF6B
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32283
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F315
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134371
+Ack Number: 1620853942
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 166D
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 42
+Identification: 32284
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F312
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134371
+Ack Number: 1620853942
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 0959
+Urgent Pointer: 0
+Options:
+Data: 0D0A
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2025
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6958
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853942
+Ack Number: 583134373
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16573
+Checksum: EC7D
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 59
+Identification: 32285
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F300
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134373
+Ack Number: 1620853942
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: C48B
+Urgent Pointer: 0
+Options:
+Data: 0D0A4C6F67696E20696E636F72726563740D0A
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 16
+Length: 40
+Identification: 32286
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: F312
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134392
+Ack Number: 1620853942
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1657
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2026
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6957
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853942
+Ack Number: 583134393
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16554
+Checksum: EC7C
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 0004758D49C7
+Source Address in bytes: 00AA00309109
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 2027
+DF: false
+MF: false
+Fragment Offset: 0
+TTL: 128
+Protocol: 6
+Checksum: 6956
+Source Address: /192.168.36.32
+Destination Address: /192.168.36.30
+Options:
+TCP
+Source Port: 1082
+Destination Port: 23
+Sequence Number: 1620853942
+Ack Number: 583134393
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 16554
+Checksum: EC7B
+Urgent Pointer: 0
+Options:
+Data:
+Ethernet:
+Destination address in bytes: 00AA0030910D
+Source Address in bytes: 0004758D49C7
+Ethertype: ip
+IP:
+Version: 4
+IHL: 5
+TOS: 0
+Length: 40
+Identification: 0
+DF: true
+MF: false
+Fragment Offset: 0
+TTL: 64
+Protocol: 6
+Checksum: 7141
+Source Address: /192.168.36.30
+Destination Address: /192.168.36.32
+Options:
+TCP
+Source Port: 23
+Destination Port: 1082
+Sequence Number: 583134393
+Ack Number: 1620853943
+Data Offset: 5
+Reserved Bits (last 6 of byte): 00000000
+Urg: false
+Ack: false
+Psh: false
+Rst: false
+Syn: false
+Fin: false
+Window Size: 5840
+Checksum: 1656
+Urgent Pointer: 0
+Options:
+Data:
+
+C:\Users\micha\Documents\projectOneNetSec\NetworkSPFG>

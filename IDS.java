@@ -5,9 +5,9 @@ import java.util.Scanner;
 import java.io.FileInputStream;
 import java.io.PrintWriter;
 import java.net.InetAddress;
+import java.util.ArrayList;
 
-
-public class NetworkSecurityOne {
+public class IDS {
 	private static  int count = 1000;
 	private static String filename = "";
 	private static boolean isFile = false;
@@ -31,6 +31,9 @@ public class NetworkSecurityOne {
 	private static int dPortMin = -1;
 	private static int dPortMax = -1;
 	private static long timeout = 20000;
+	private static String signatureFile = "signatures.txt";
+	private static String logFile = "log.txt";
+	private static ArrayList<Signature> signatures = new ArrayList<Signature>();
 
 	public static void main(String[] args) {
 
@@ -137,7 +140,24 @@ public class NetworkSecurityOne {
 					idx++;
 					timeout = Integer.parseInt(args[idx]);
 					break;
+				case "-f":
+					idx++;
+					signatureFile = args[idx];
+					break;
     }
+	}
+
+		//build signature List
+		try{
+		File sigFile = new File(signatureFile);
+		Scanner sigScanner = new Scanner(sigFile);
+		while(sigScanner.hasNextLine()){
+			Signature sig = new Signature(sigScanner.nextLine());
+			signatures.add(sig);
+		}
+		System.out.println(signatures.size());
+	} catch(Exception e){
+		e.printStackTrace();
 	}
 
     if(!isFile){
