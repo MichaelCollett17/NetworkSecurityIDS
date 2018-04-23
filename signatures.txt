@@ -1,5 +1,5 @@
 alert tcp 192.168.1.0/24 any -> 192.168.1.0/24 111 (content: "|00 01 86 a5|"; msg: "external mountd access";)
-alert tcp any any -> 192.168.1.0/24 any (flags: S; msg: "SYN packet";)
+alert tcp any any -> 192.168.1.0/24 any (flags: S; msg: "SYN packet"; ttl: 64; fragbits: D)
 alert tcp 129.244.0.0/16 any <> 192.168.1.0/24 23
 pass udp any 120:130 <> any 140:150
 alert tcp any any -> 192.168.1.0/24 139 (msg: "DOS Winnuke attack"; flags: U+; logto: "logfiledude.txt";)

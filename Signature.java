@@ -52,7 +52,7 @@ public class Signature{
   private boolean icodeBool = false;
   private int icode = -1;
   private boolean contentBool = false;
-  private byte[] content;
+  private String content;
   private boolean sameIP = false;
   private boolean sidBool = false;
   private int sid = -1;
@@ -193,38 +193,96 @@ public class Signature{
           break;
         case "logto":
           logBool = true;
-          logFile = option[1].replace("\"", "").replace("\\s+","");
+          logFile = option[1].replace("\"", "").replaceAll("\\s+","");
           break;
         case "ttl":
-
+          ttlBool = true;
+          ttl = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "tos":
+          tosBool = true;
+          tos = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "id":
+          idBool = true;
+          id = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "fragoffset":
+          fragOffBool = true;
+          fragOffset = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "ipoption":
+          ipOptionBool = true;
+          //Not sure what to do here
           break;
         case "fragbits":
+          fragBitBool = true;
+          if(option[1].toLowerCase().contains("!d"))
+            df = false;
+          else if(option[1].toLowerCase().contains("d"))
+            df = true;
+          if(option[1].toLowerCase().contains("!m"))
+            mf = false;
+          else if(option[1].toLowerCase().contains("m"))
+            mf = true;
+          if(option[1].toLowerCase().contains("!r"))
+            r = false;
+          else if(option[1].toLowerCase().contains("r"))
+            r = true;
           break;
         case "dsize":
+          dSizeBool = true;
+          dSize = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "flags":
+          if(option[1].toLowerCase().contains("!a"))
+            tcp_ack = false;
+          else if(option[1].toLowerCase().contains("a"))
+            tcp_ack = true;
+          if(option[1].toLowerCase().contains("!p"))
+            tcp_psh = false;
+          else if(option[1].toLowerCase().contains("p"))
+            tcp_psh = true;
+          if(option[1].toLowerCase().contains("!r"))
+            tcp_rst = false;
+          else if(option[1].toLowerCase().contains("r"))
+            tcp_rst = true;
+          if(option[1].toLowerCase().contains("!s"))
+            tcp_syn = false;
+          else if(option[1].toLowerCase().contains("s"))
+            tcp_syn = true;
+          if(option[1].toLowerCase().contains("!f"))
+            tcp_fin = false;
+          else if(option[1].toLowerCase().contains("f"))
+            tcp_fin = true;
           break;
         case "seq":
+          seqBool = true;
+          seq = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "ack":
+          ackBool = true;
+          ack = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "itype":
+          itypeBool = true;
+          itype = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "icode":
+          icodeBool = true;
+          icode = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "content":
+          contentBool = true;
+          content = option[1].replace("\"", "").replaceAll("\\s+","").replaceAll("\\|","");
+          System.out.println(content);
           break;
         case "sameip":
+          sameIP = true;
           break;
         case "sid":
+          sidBool = true;
+          sid = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
       }
     }
@@ -239,5 +297,16 @@ public class Signature{
       result += ip * Math.pow(256, power);
     }
     return result;
+  }
+
+  public static String bytesToHex(byte[] bytes) {
+    char[] hexArray = "0123456789ABCDEF".toCharArray();
+    char[] hexChars = new char[bytes.length * 2];
+    for ( int j = 0; j < bytes.length; j++ ) {
+        int v = bytes[j] & 0xFF;
+        hexChars[j * 2] = hexArray[v >>> 4];
+        hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+    }
+    return new String(hexChars);
   }
 }
