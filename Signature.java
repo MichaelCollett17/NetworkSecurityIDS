@@ -82,9 +82,58 @@ public class Signature{
         port2 = Integer.parseInt(tempPort.substring(indexOfColon + 1));
       }
     }
+
+    //-> or <>
+    String directionality = scanner.next();
+    if(directionality.equals("->")){
+      unidirectional = true;
+    }
+    else if(directionality.equals("<>")){
+      unidirectional = false;
+    }
+    else{
+      System.err.println("Misformatted signature");
+    }
+
+    String tempIP_ = scanner.next();
+    if(tempIP_.equals(any)){
+      ip3 = 0;
+      ip4 = 0xffffffffL;//L is used for long
+    }
+    else {
+      String[] parts = tempIP_.split("/");
+      ip3 = ipToLong(parts[0]);
+      long endingFs = 0xffffffffL >>> Integer.parseInt(parts[1]);
+      ip4 = ip3 | endingFs;
+    }
+
+    String tempPort_ = scanner.next();
+    if(tempPort_.equals(any)){
+      port3 = 0;
+      port4 = 65535;
+    }
+    else{
+      int indexOfColon = tempPort_.indexOf(colon);//-1 not found, 0 = :port4, else port3:port4
+      if(indexOfColon == -1) {
+        port3 = Integer.parseInt(tempPort_);
+        port4 = port3;
+      }
+      else if(indexOfColon == 0) {
+        port3 = 0;
+        port4 = Integer.parseInt(tempPort_.substring(1));
+      }
+      else{
+        port3 = Integer.parseInt(tempPort_.substring(0, indexOfColon));
+        port4 = Integer.parseInt(tempPort_.substring(indexOfColon + 1));
+      }
+    }
+
     System.out.println("**********\nAlert:\t\t" + alert + "\nProtocol:\t"
       + protocol + "\nIP1:\t\t" + ip1 + "\nIP2:\t\t" + ip2 +
-      "\nPort1:\t\t" + port1 + "\nPort2\t\t" + port2 + "\n**********\n");
+      "\nPort1:\t\t" + port1 + "\nPort2\t\t" + port2 +
+      "\nUnidirectional:\t" + unidirectional + "\nIP3:\t\t" + ip3 + "\nIP4:\t\t"
+       + ip4 + "\nPort3:\t\t" + port3 + "\nPort4\t\t" + port4 +
+       "\n**********\n");
   }
 
   public long ipToLong(String ipAddress) {
