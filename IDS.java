@@ -155,7 +155,6 @@ public class IDS {
 			Signature sig = new Signature(sigScanner.nextLine());
 			signatures.add(sig);
 		}
-		System.out.println(signatures.size());
 	} catch(Exception e){
 		e.printStackTrace();
 	}

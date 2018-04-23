@@ -46,7 +46,16 @@ public class Signature{
   private boolean seqBool = false;
   private int seq = -1;
   private boolean ackBool = false;
-  private
+  private int ack = -1;
+  private boolean itypeBool = false;
+  private int itype = -1;
+  private boolean icodeBool = false;
+  private int icode = -1;
+  private boolean contentBool = false;
+  private byte[] content;
+  private boolean sameIP = false;
+  private boolean sidBool = false;
+  private int sid = -1;
 
   public Signature(String r){
     this.rule = r;
@@ -157,15 +166,68 @@ public class Signature{
         port4 = Integer.parseInt(tempPort_.substring(indexOfColon + 1));
       }
     }
-    if(scanner.hasNextLine())
+    if(scanner.hasNextLine()){
       options = scanner.nextLine();
-
-    System.out.println("**********\nAlert:\t\t" + alert + "\nProtocol:\t"
+      setOptions();
+    }
+    /*System.out.println("**********\nAlert:\t\t" + alert + "\nProtocol:\t"
       + protocol + "\nIP1:\t\t" + ip1 + "\nIP2:\t\t" + ip2 +
       "\nPort1:\t\t" + port1 + "\nPort2\t\t" + port2 +
       "\nUnidirectional:\t" + unidirectional + "\nIP3:\t\t" + ip3 + "\nIP4:\t\t"
        + ip4 + "\nPort3:\t\t" + port3 + "\nPort4\t\t" + port4 + "\nOptions:\t"
-       + options + "\n**********\n");
+       + options + "\n**********\n");*/
+  }
+
+  private void setOptions(){
+    //remove parentheses and space
+    options = options.substring(2, options.length()-1);
+    //split by semicolon and then colon
+    String[] opts = options.split(";");
+    for(int idx = 0; idx < opts.length; idx++){
+      String[] option = opts[idx].split(":");
+      String opt = option[0].replaceAll("\\s+","");
+      switch(opt.toLowerCase()){
+        case "msg":
+          msgBool = true;
+          msg = option[1].replace("\"", "");
+          break;
+        case "logto":
+          logBool = true;
+          logFile = option[1].replace("\"", "").replace("\\s+","");
+          break;
+        case "ttl":
+
+          break;
+        case "tos":
+          break;
+        case "id":
+          break;
+        case "fragoffset":
+          break;
+        case "ipoption":
+          break;
+        case "fragbits":
+          break;
+        case "dsize":
+          break;
+        case "flags":
+          break;
+        case "seq":
+          break;
+        case "ack":
+          break;
+        case "itype":
+          break;
+        case "icode":
+          break;
+        case "content":
+          break;
+        case "sameip":
+          break;
+        case "sid":
+          break;
+      }
+    }
   }
 
   public long ipToLong(String ipAddress) {
@@ -178,5 +240,4 @@ public class Signature{
     }
     return result;
   }
-
 }
