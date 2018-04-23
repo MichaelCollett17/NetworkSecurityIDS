@@ -3,3 +3,4 @@ alert tcp any any -> 192.168.1.0/24 any (flags: S; msg: "SYN packet";)
 alert tcp 129.244.0.0/16 any <> 192.168.1.0/24 23
 pass udp any 120:130 <> any 140:150
 alert tcp any any -> 192.168.1.0/24 139 (msg: "DOS Winnuke attack"; flags: U+;)
+pass icmp 129.220.111.123/32 :80 <> any 0:150

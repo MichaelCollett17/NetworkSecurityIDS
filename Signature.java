@@ -53,12 +53,12 @@ public class Signature{
     String tempIP = scanner.next();
     if(tempIP.equals(any)){
       ip1 = 0;
-      ip2 = 0xffffffff;
+      ip2 = 0xffffffffL;//L is used for long
     }
     else {
       String[] parts = tempIP.split("/");
       ip1 = ipToLong(parts[0]);
-      long endingFs = 0xffffffff >> Integer.parseInt(parts[1]);
+      long endingFs = 0xffffffffL >>> Integer.parseInt(parts[1]);
       ip2 = ip1 | endingFs;
     }
 
@@ -79,7 +79,7 @@ public class Signature{
       }
       else{
         port1 = Integer.parseInt(tempPort.substring(0, indexOfColon));
-        port1 = Integer.parseInt(tempPort.substring(indexOfColon + 1));
+        port2 = Integer.parseInt(tempPort.substring(indexOfColon + 1));
       }
     }
     System.out.println("**********\nAlert:\t\t" + alert + "\nProtocol:\t"
