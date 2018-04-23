@@ -4,7 +4,6 @@ public class Signature{
   final static String any = "any";
   final static int colon = ':';
   private String rule = "";
-  private String logFile = "";
   private boolean alert = true;//if false -> pass
   private String protocol = "";
   private long ip1 = -1;//could be cidr or "any"
@@ -17,6 +16,37 @@ public class Signature{
   private int port3 = -1;
   private int port4 = -1;
   private String options = "";
+
+  private boolean msgBool = false;
+  private String msg = "";
+  private boolean logBool = false;
+  private String logFile = "";
+  private boolean ttlBool = false;
+  private int ttl = -1;
+  private boolean tosBool = false;
+  private int tos = -1;
+  private boolean idBool = false;
+  private int id = -1;
+  private boolean fragOffBool = false;
+  private int fragOffset = -1;
+  private boolean ipOptionBool = false;
+  private byte[] ipOptCode;
+  private boolean fragBitBool = false;
+  private boolean df;//D or !D dont fragment
+  private boolean r;//R or !R reserved bit
+  private boolean mf; //M or !M more frags
+  private boolean dSizeBool = false;
+  private int dSize = -1;
+  private boolean flagBool = false;
+  private boolean tcp_ack;//A
+  private boolean tcp_psh;//P
+  private boolean tcp_rst;//R
+  private boolean tcp_syn;//S
+  private boolean tcp_fin;//F
+  private boolean seqBool = false;
+  private int seq = -1;
+  private boolean ackBool = false;
+  private
 
   public Signature(String r){
     this.rule = r;
@@ -127,13 +157,15 @@ public class Signature{
         port4 = Integer.parseInt(tempPort_.substring(indexOfColon + 1));
       }
     }
+    if(scanner.hasNextLine())
+      options = scanner.nextLine();
 
     System.out.println("**********\nAlert:\t\t" + alert + "\nProtocol:\t"
       + protocol + "\nIP1:\t\t" + ip1 + "\nIP2:\t\t" + ip2 +
       "\nPort1:\t\t" + port1 + "\nPort2\t\t" + port2 +
       "\nUnidirectional:\t" + unidirectional + "\nIP3:\t\t" + ip3 + "\nIP4:\t\t"
-       + ip4 + "\nPort3:\t\t" + port3 + "\nPort4\t\t" + port4 +
-       "\n**********\n");
+       + ip4 + "\nPort3:\t\t" + port3 + "\nPort4\t\t" + port4 + "\nOptions:\t"
+       + options + "\n**********\n");
   }
 
   public long ipToLong(String ipAddress) {
