@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.io.PrintWriter;
+import java.io.File;
 
 public class Signature{
   final static String any = "any";
@@ -20,7 +22,7 @@ public class Signature{
   private boolean msgBool = false;
   private String msg = "";
   private boolean logBool = false;
-  private String logFile = "";
+  private String logFile = "logFile.txt";
   private boolean ttlBool = false;
   private int ttl = -1;
   private boolean tosBool = false;
@@ -41,11 +43,16 @@ public class Signature{
   private boolean dSizeBool = false;
   private int dSize = -1;
   private boolean flagBool = false;
-  private boolean tcp_ack;//A
-  private boolean tcp_psh;//P
-  private boolean tcp_rst;//R
-  private boolean tcp_syn;//S
-  private boolean tcp_fin;//F
+  private boolean tcp_ack = false;//A
+  private boolean tcp_psh = false;//P
+  private boolean tcp_rst = false;//R
+  private boolean tcp_syn = false;//S
+  private boolean tcp_fin = false;//F
+  private boolean not_tcp_ack = false;//A
+  private boolean not_tcp_psh = false;//P
+  private boolean not_tcp_rst = false;//R
+  private boolean not_tcp_syn = false;//S
+  private boolean not_tcp_fin = false;//F
   private boolean seqBool = false;
   private int seq = -1;
   private boolean ackBool = false;
@@ -65,35 +72,51 @@ public class Signature{
     setMainParams();
   }
 
-  public void compare(IPPacket ip){
+  public boolean compare(IPPacket ip){
     boolean ruleMatch = false;
-    testIP(ip);
-    testCommon(ip.getip_packet());
+    ruleMatch = testIP(ip);
+    if(ruleMatch)
+      ruleMatch = testCommon(ip.getip_packet());
+    System.out.println("IP: " + ruleMatch);
+    return ruleMatch;
   }
 
-  public void compare(ARP arp){
+  public boolean compare(ARP arp){
     boolean ruleMatch = false;
-    testCommon(arp.getArpPacket());
+    ruleMatch = testCommon(arp.getArpPacket());
+    System.out.println("ARP: " + ruleMatch);
+    return ruleMatch;
   }
 
-  public void compare(TCP tcp){
+  public boolean compare(TCP tcp){
     boolean ruleMatch = false;
-    testTCP(tcp);
-    testIP(tcp);
-    testCommon(tcp.getTcpPacket());
+    ruleMatch = testTCP(tcp);
+    if(ruleMatch)
+      ruleMatch = testIP(tcp);
+    if(ruleMatch)
+      ruleMatch = testCommon(tcp.getTcpPacket());
+    System.out.println("TCP: " + ruleMatch);
+    return ruleMatch;
   }
 
-  public void compare(UDP udp){
+  public boolean compare(UDP udp){
     boolean ruleMatch = false;
-    testIP(udp);
-    testCommon(udp.getUDPPacket());
+    ruleMatch = testIP(udp);
+    if(ruleMatch)
+      ruleMatch = testCommon(udp.getUDPPacket());
+    System.out.println("UDP: " + ruleMatch);
+    return ruleMatch;
   }
 
-  public void compare(ICMP icmp){
+  public boolean compare(ICMP icmp){
     boolean ruleMatch = false;
-    testICMP(icmp);
-    testIP(icmp);
-    testCommon(icmp.getICMPPacket());
+    ruleMatch = testICMP(icmp);
+    if(ruleMatch)
+      ruleMatch = testIP(icmp);
+    if(ruleMatch)
+      ruleMatch = testCommon(icmp.getICMPPacket());
+    System.out.println("ICMP: " + ruleMatch);
+    return ruleMatch;
   }
 
   //use many methods as most code is the same
@@ -249,24 +272,25 @@ public class Signature{
           dSize = Integer.parseInt(option[1].replaceAll("\\s+",""));
           break;
         case "flags":
+          flagBool = true;
           if(option[1].toLowerCase().contains("!a"))
-            tcp_ack = false;
+            not_tcp_ack = true;
           else if(option[1].toLowerCase().contains("a"))
             tcp_ack = true;
           if(option[1].toLowerCase().contains("!p"))
-            tcp_psh = false;
+            not_tcp_psh = true;
           else if(option[1].toLowerCase().contains("p"))
             tcp_psh = true;
           if(option[1].toLowerCase().contains("!r"))
-            tcp_rst = false;
+            not_tcp_rst = true;
           else if(option[1].toLowerCase().contains("r"))
             tcp_rst = true;
           if(option[1].toLowerCase().contains("!s"))
-            tcp_syn = false;
+            not_tcp_syn = true;
           else if(option[1].toLowerCase().contains("s"))
             tcp_syn = true;
           if(option[1].toLowerCase().contains("!f"))
-            tcp_fin = false;
+            not_tcp_fin = true;
           else if(option[1].toLowerCase().contains("f"))
             tcp_fin = true;
           break;
@@ -325,16 +349,53 @@ public class Signature{
 
   //test for flags, seq, and ack
   private boolean testTCP(TCP tcp){
+    if(flagBool){
+      if(!((tcp_ack && tcp.isTcp_ack())|(not_tcp_ack && !tcp.isTcp_ack())|
+      (tcp_psh && tcp.isTcp_psh())|(not_tcp_psh && !tcp.isTcp_psh())|
+      (tcp_rst && tcp.isTcp_rst())|(not_tcp_rst && !tcp.isTcp_rst())|
+      (tcp_syn && tcp.isTcp_syn())|(not_tcp_syn && !tcp.isTcp_syn())|
+      (tcp_fin && tcp.isTcp_fin())|(not_tcp_fin && !tcp.isTcp_fin()))){
+        return false;
+      }
+    }
+    if(seqBool && (seq != tcp.getTcp_sequenceNumber()))
+      return false;
+    if(ackBool && (ack != tcp.getTcp_ackNumber()))
+      return false;
     return true;
   }
 
   //test for itype and icode
   private boolean testICMP(ICMP icmp){
+    if(itypeBool && (itype != icmp.getIcmp_type()))
+      return false;
+    if(icodeBool && (icode != icmp.getIcmp_code()))
+      return false;
     return true;
   }
 
   //dsize, content, logto, msg
   private boolean testCommon(byte[] packet){
+    if(dSizeBool && (dSize != packet.length))
+      return false;
+    if(contentBool){
+      SimplePacketDriver driver=new SimplePacketDriver();
+      String packetString = driver.byteArrayToString(packet).replaceAll("//s+","").toLowerCase();
+      //System.out.println(packetString);
+      int indexOfContent = packetString.indexOf(content);
+      if(indexOfContent != -1)
+        return false;
+    }
+    if(alert){
+      try{
+        PrintWriter writer = new PrintWriter(logFile);
+        writer.println(outputStringify(packet) + "\r\n");
+        if(msgBool)
+          writer.println(msg + "\r\n");
+      } catch(Exception e){
+        e.printStackTrace();
+      }
+    }
     return true;
   }
 
@@ -358,5 +419,17 @@ public class Signature{
         hexChars[j * 2 + 1] = hexArray[v & 0x0F];
     }
     return new String(hexChars);
+  }
+
+  public static String outputStringify(byte [] b){
+    String hex = bytesToHex(b);
+    String output = "";
+    for(int i = 0; i < hex.length(); i+=2){
+      output += hex.substring(i,i+2) + " ";
+      if((i% 32) == 30){
+        output += "\r\n";
+      }
+    }
+    return output;
   }
 }

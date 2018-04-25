@@ -193,7 +193,7 @@ public class IDS {
 				System.out.println("Packet Dropped Due to False Checksum");
 			}
 			else if((at.getSID() == 0)|(at.getSID() == 1)|(at.getSID() == 2)){
-				analyze(at.getAssembledPacket());
+				analyze(at.getAssembledPacket(), at);
 			}
 			else if(at.getSID() == 3){
 				System.out.println("Warning: Oversized Packet");
@@ -208,7 +208,7 @@ public class IDS {
 				System.out.println("Packet Dropped Due to False Checksum");
 			}
 			else if((at_.getSID() == 0)|(at.getSID() == 1)|(at.getSID() == 2)){
-				analyze(at_.getAssembledPacket());
+				analyze(at_.getAssembledPacket(), at);
 			}
 			else if(at_.getSID() == 3){
 				System.out.println("Warning: Oversized Packet");
@@ -221,7 +221,7 @@ public class IDS {
 			writer.close();
 	}
 
-	public static void analyze(byte[] packet){
+	public static void analyze(byte[] packet, AssembledTriple at){
 		SimplePacketDriver driver = new SimplePacketDriver();
 		Ethernet ethernet = new Ethernet(packet);
 		if(filterType && filterVal.equals("eth")){
@@ -244,18 +244,24 @@ public class IDS {
 				}
 			}
 			if(filterType && filterVal.equals("ip")){
-				if(saveOutput){
-					writer.println(outputStringify(packet) + "\r\n");
+				boolean sigMatch = IPSignatureChecker(at);
+				if(!sigMatch){
+					if(saveOutput){
+						writer.println(outputStringify(packet) + "\r\n");
+					}
+					System.out.println(ip.toString());
 				}
-				System.out.println(ip.toString());
 			}
 			if(iptype.equals("icmp")){
 				ICMP icmp = new ICMP(packet);
 				if((!filterType) || filterVal.equals("icmp")){
-					if(saveOutput){
-						writer.println(outputStringify(packet) + "\r\n");
-					}
-					System.out.println(icmp.toString());
+					boolean sigMatch = ICMPSignatureChecker(at);
+					if(!sigMatch){
+						if(saveOutput){
+							writer.println(outputStringify(packet) + "\r\n");
+						}
+						System.out.println(icmp.toString());
+				}
 				}
 			}
 			else if(iptype.equals("udp")){
@@ -267,11 +273,16 @@ public class IDS {
 					return;
 				}
 				if((!filterType) || filterVal.equals("udp")){
-					System.out.println(udp.toString());
-					if(saveOutput){
-						writer.println(outputStringify(packet) + "\r\n");
+					boolean sigMatch = UDPSignatureChecker(at);
+					if(!sigMatch){
+						System.out.println("UDPPPDUPPPDUPPP****");
+						System.out.println(udp.toString());
+						if(saveOutput){
+							writer.println(outputStringify(packet) + "\r\n");
+						}
 					}
 				}
+
 			}
 			else if(iptype.equals("tcp")){
 				TCP tcp = new TCP(packet);
@@ -282,9 +293,12 @@ public class IDS {
 					return;
 				}
 				if((!filterType) || filterVal.equals("tcp")){
-					System.out.println(tcp.toString());
-					if(saveOutput){
-						writer.println(outputStringify(packet) + "\r\n");
+					boolean sigMatch = TCPSignatureChecker(at);
+					if(!sigMatch){
+						System.out.println(tcp.toString());
+						if(saveOutput){
+							writer.println(outputStringify(packet) + "\r\n");
+						}
 					}
 				}
 			}
@@ -301,9 +315,12 @@ public class IDS {
 				}
 			}
 			if((!filterType) || filterVal.equals("arp")){
-				System.out.println(a.toString());
-				if(saveOutput){
-					writer.println(outputStringify(packet) + "\r\n");
+				boolean sigMatch = ARPSignatureChecker(at);
+				if(!sigMatch){
+					System.out.println(a.toString());
+					if(saveOutput){
+						writer.println(outputStringify(packet) + "\r\n");
+					}
 				}
 			}
 		} else{
@@ -335,6 +352,88 @@ public class IDS {
                              + Character.digit(s.charAt(i+1), 16));
     }
     return data;
+	}
+
+	public static boolean IPSignatureChecker(AssembledTriple at){
+		boolean sigMatch = false;
+		//check each fragment and the assembled packet
+		IPPacket packet = new IPPacket(at.getAssembledPacket());
+		ArrayList<byte[]> fragments = at.getFragments();
+		for(int i = 0; i < fragments.size(); i++){
+			IPPacket frag = new IPPacket(fragments.get(i));
+			for(int idx = 0; idx < signatures.size(); idx++){
+				sigMatch = signatures.get(idx).compare(frag);
+			}
+		}
+		for(int index = 0; index < signatures.size(); index++){
+			sigMatch = signatures.get(index).compare(packet);
+		}
+
+		return sigMatch;
+	}
+
+	public static boolean ARPSignatureChecker(AssembledTriple at){
+		boolean sigMatch = false;
+		ARP packet = new ARP(at.getAssembledPacket());
+		for(int index = 0; index < signatures.size(); index++){
+			sigMatch = signatures.get(index).compare(packet);
+		}
+
+		return sigMatch;
+	}
+
+	public static boolean TCPSignatureChecker(AssembledTriple at){
+		boolean sigMatch = false;
+		//check each fragment and the assembled packet
+		TCP packet = new TCP(at.getAssembledPacket());
+		ArrayList<byte[]> fragments = at.getFragments();
+		for(int i = 0; i < fragments.size(); i++){
+			TCP frag = new TCP(fragments.get(i));
+			for(int idx = 0; idx < signatures.size(); idx++){
+				sigMatch = signatures.get(idx).compare(frag);
+			}
+		}
+		for(int index = 0; index < signatures.size(); index++){
+			sigMatch = signatures.get(index).compare(packet);
+		}
+
+		return sigMatch;
+	}
+
+	public static boolean UDPSignatureChecker(AssembledTriple at){
+		boolean sigMatch = false;
+		//check each fragment and the assembled packet
+		UDP packet = new UDP(at.getAssembledPacket());
+		ArrayList<byte[]> fragments = at.getFragments();
+		for(int i = 0; i < fragments.size(); i++){
+			UDP frag = new UDP(fragments.get(i));
+			for(int idx = 0; idx < signatures.size(); idx++){
+				sigMatch = signatures.get(idx).compare(frag);
+			}
+		}
+		for(int index = 0; index < signatures.size(); index++){
+			sigMatch = signatures.get(index).compare(packet);
+		}
+
+		return sigMatch;
+	}
+
+	public static boolean ICMPSignatureChecker(AssembledTriple at){
+		boolean sigMatch = false;
+		//check each fragment and the assembled packet
+		ICMP packet = new ICMP(at.getAssembledPacket());
+		ArrayList<byte[]> fragments = at.getFragments();
+		for(int i = 0; i < fragments.size(); i++){
+			ICMP frag = new ICMP(fragments.get(i));
+			for(int idx = 0; idx < signatures.size(); idx++){
+				sigMatch = signatures.get(idx).compare(frag);
+			}
+		}
+		for(int index = 0; index < signatures.size(); index++){
+			sigMatch = signatures.get(index).compare(packet);
+		}
+
+		return sigMatch;
 	}
 
 	public static String outputStringify(byte [] b){

@@ -1,0 +1,7 @@
+Test tcp, icmp, and common
+determine dataflow from IDS to Signature: each fragment, log at end of rulematch, add compare to ids
+test, examples, writeup and submit
+
+proj1 writeup and necessary files into zip
+proj2 necessary file generation in zip and writeup
+proj3 above 
