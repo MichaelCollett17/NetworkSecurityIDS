@@ -74,7 +74,8 @@ public class Signature{
 
   public boolean compare(IPPacket ip){
     boolean ruleMatch = false;
-    ruleMatch = testIP(ip);
+    if(protocol.equals("ip"))
+      ruleMatch = testIP(ip);
     if(ruleMatch)
       ruleMatch = testCommon(ip.getip_packet());
     System.out.println("IP: " + ruleMatch);
@@ -83,14 +84,16 @@ public class Signature{
 
   public boolean compare(ARP arp){
     boolean ruleMatch = false;
-    ruleMatch = testCommon(arp.getArpPacket());
+    if(protocol.equals("arp"))
+      ruleMatch = testCommon(arp.getArpPacket());
     System.out.println("ARP: " + ruleMatch);
     return ruleMatch;
   }
 
   public boolean compare(TCP tcp){
     boolean ruleMatch = false;
-    ruleMatch = testTCP(tcp);
+    if(protocol.equals("tcp"))
+      ruleMatch = testTCP(tcp);
     if(ruleMatch)
       ruleMatch = testIP(tcp);
     if(ruleMatch)
@@ -101,7 +104,8 @@ public class Signature{
 
   public boolean compare(UDP udp){
     boolean ruleMatch = false;
-    ruleMatch = testIP(udp);
+    if(protocol.equals("udp"))
+      ruleMatch = testIP(udp);
     if(ruleMatch)
       ruleMatch = testCommon(udp.getUDPPacket());
     System.out.println("UDP: " + ruleMatch);
@@ -110,7 +114,8 @@ public class Signature{
 
   public boolean compare(ICMP icmp){
     boolean ruleMatch = false;
-    ruleMatch = testICMP(icmp);
+    if(protocol.equals("icmp"))
+      ruleMatch = testICMP(icmp);
     if(ruleMatch)
       ruleMatch = testIP(icmp);
     if(ruleMatch)
@@ -327,6 +332,25 @@ public class Signature{
   }
   //test for ttl, tos, id, fragoffset, fragbits, sameIP,
   private boolean testIP(IPPacket ip){
+    //check IP
+    long ipSrcAddr = 0;
+    long ipDestAddr = 0;
+
+    if(unidirectional){
+      if(!((ipSrcAddr <= ip2) && (ipSrcAddr >= ip1)))
+        return false;
+      if(!((ipDestAddr <= ip4) && (ipDestAddr >= ip3)))
+        return false;
+    }
+    else{
+      if(!((ipSrcAddr <= ip2) && (ipSrcAddr >= ip1)
+      | ((ipSrcAddr <= ip4) && (ipSrcAddr >= ip3))))
+        return false;
+      if(!((ipDestAddr <= ip2) && (ipDestAddr >= ip1)
+      | ((ipDestAddr <= ip4) && (ipDestAddr >= ip3))))
+        return false;
+    }
+    //check Ports
     if(ttlBool && (ip.getIp_TTL() != ttl))
       return false;
     if(tosBool && (ip.getIp_TOS() != tos))
