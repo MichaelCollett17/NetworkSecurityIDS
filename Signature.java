@@ -93,6 +93,8 @@ public class Signature{
   public boolean compare(TCP tcp){
     boolean ruleMatch = false;
     if(protocol.equals("tcp"))
+      ruleMatch = portTest(tcp.getTcp_sourcePort(), tcp.getTcp_destinationPort());
+    if(ruleMatch)
       ruleMatch = testTCP(tcp);
     if(ruleMatch)
       ruleMatch = testIP(tcp);
@@ -105,6 +107,8 @@ public class Signature{
   public boolean compare(UDP udp){
     boolean ruleMatch = false;
     if(protocol.equals("udp"))
+      ruleMatch = portTest(udp.getUdp_sourcePort(), udp.getUdp_destinationPort());
+    if(ruleMatch)
       ruleMatch = testIP(udp);
     if(ruleMatch)
       ruleMatch = testCommon(udp.getUDPPacket());
@@ -333,9 +337,8 @@ public class Signature{
   //test for ttl, tos, id, fragoffset, fragbits, sameIP,
   private boolean testIP(IPPacket ip){
     //check IP
-    long ipSrcAddr = 0;
-    long ipDestAddr = 0;
-
+    long ipSrcAddr = ipToLong(ip.getIp_sourceAddress().getHostAddress());
+    long ipDestAddr = ipToLong(ip.getIp_destAddress().getHostAddress());
     if(unidirectional){
       if(!((ipSrcAddr <= ip2) && (ipSrcAddr >= ip1)))
         return false;
@@ -350,7 +353,7 @@ public class Signature{
       | ((ipDestAddr <= ip4) && (ipDestAddr >= ip3))))
         return false;
     }
-    //check Ports
+
     if(ttlBool && (ip.getIp_TTL() != ttl))
       return false;
     if(tosBool && (ip.getIp_TOS() != tos))
@@ -419,6 +422,19 @@ public class Signature{
       } catch(Exception e){
         e.printStackTrace();
       }
+    }
+    return true;
+  }
+
+  private boolean portTest(int srcPort, int destPort){
+    if(unidirectional){
+      if(!(((srcPort <= port2) && (srcPort >= port1)) && ((destPort <= port4) && (destPort>= port3))))
+        return false;
+    } else{
+      if(!(((srcPort <= port2) && (srcPort >= port1)) && ((srcPort <= port4) && (srcPort>= port3))))
+        return false;
+      if(!(((destPort <= port2) && (destPort >= port1)) && ((destPort <= port4) && (destPort>= port3))))
+        return false;
     }
     return true;
   }
