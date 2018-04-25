@@ -275,7 +275,6 @@ public class IDS {
 				if((!filterType) || filterVal.equals("udp")){
 					boolean sigMatch = UDPSignatureChecker(at);
 					if(!sigMatch){
-						System.out.println("UDPPPDUPPPDUPPP****");
 						System.out.println(udp.toString());
 						if(saveOutput){
 							writer.println(outputStringify(packet) + "\r\n");

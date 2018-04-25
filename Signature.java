@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.io.PrintWriter;
 import java.io.File;
+import java.io.FileOutputStream;
+
 
 public class Signature{
   final static String any = "any";
@@ -78,7 +80,6 @@ public class Signature{
       ruleMatch = testIP(ip);
     if(ruleMatch)
       ruleMatch = testCommon(ip.getip_packet());
-    System.out.println("IP: " + ruleMatch);
     return ruleMatch;
   }
 
@@ -86,7 +87,6 @@ public class Signature{
     boolean ruleMatch = false;
     if(protocol.equals("arp"))
       ruleMatch = testCommon(arp.getArpPacket());
-    System.out.println("ARP: " + ruleMatch);
     return ruleMatch;
   }
 
@@ -100,7 +100,6 @@ public class Signature{
       ruleMatch = testIP(tcp);
     if(ruleMatch)
       ruleMatch = testCommon(tcp.getTcpPacket());
-    System.out.println("TCP: " + ruleMatch);
     return ruleMatch;
   }
 
@@ -112,7 +111,6 @@ public class Signature{
       ruleMatch = testIP(udp);
     if(ruleMatch)
       ruleMatch = testCommon(udp.getUDPPacket());
-    System.out.println("UDP: " + ruleMatch);
     return ruleMatch;
   }
 
@@ -124,7 +122,6 @@ public class Signature{
       ruleMatch = testIP(icmp);
     if(ruleMatch)
       ruleMatch = testCommon(icmp.getICMPPacket());
-    System.out.println("ICMP: " + ruleMatch);
     return ruleMatch;
   }
 
@@ -322,7 +319,6 @@ public class Signature{
         case "content":
           contentBool = true;
           content = option[1].replace("\"", "").replaceAll("\\s+","").replaceAll("\\|","");
-          System.out.println(content);
           break;
         case "sameip":
           sameIP = true;
@@ -408,17 +404,17 @@ public class Signature{
     if(contentBool){
       SimplePacketDriver driver=new SimplePacketDriver();
       String packetString = driver.byteArrayToString(packet).replaceAll("//s+","").toLowerCase();
-      //System.out.println(packetString);
       int indexOfContent = packetString.indexOf(content);
       if(indexOfContent != -1)
         return false;
     }
     if(alert){
       try{
-        PrintWriter writer = new PrintWriter(logFile);
+        PrintWriter writer = new PrintWriter(new FileOutputStream(new File(logFile), true));
         writer.println(outputStringify(packet) + "\r\n");
         if(msgBool)
           writer.println(msg + "\r\n");
+        writer.close();
       } catch(Exception e){
         e.printStackTrace();
       }
