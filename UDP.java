@@ -23,6 +23,10 @@ public class UDP extends IPPacket{
     udp_payload = Arrays.copyOfRange(udp_packet,8,udp_packet.length);
   }
 
+  public byte[] getUDPPacket(){
+    return udp_packet;
+  }
+
 	public int getUdp_sourcePort() {
 		return udp_sourcePort;
 	}

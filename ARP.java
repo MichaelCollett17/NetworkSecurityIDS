@@ -39,6 +39,10 @@ public class ARP extends Ethernet {
     }
   }
 
+  public byte[] getArpPacket(){
+    return arp_packet;
+  }
+
 	public int getArp_hardwareType() {
 		return arp_hardwareType;
 	}

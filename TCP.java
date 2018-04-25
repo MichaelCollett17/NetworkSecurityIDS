@@ -51,6 +51,10 @@ public class TCP extends IPPacket {
     this.tcp_data = Arrays.copyOfRange(tcp_packet, endHeader, tcp_packet.length);
   }
 
+  public byte[] getTcpPacket(){
+    return tcp_packet;
+  }
+
 	public int getTcp_sourcePort() {
 		return tcp_sourcePort;
 	}

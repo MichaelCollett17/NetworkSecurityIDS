@@ -20,6 +20,10 @@ public class ICMP extends IPPacket{
     setIcmp_payload(Arrays.copyOfRange(icmp_packet,4,icmp_packet.length));
   }
 
+  public byte[] getICMPPacket(){
+    return icmp_packet;
+  }
+
   public void setIcmp_payload(byte[] payload){
     this.icmp_payload = payload;
   }

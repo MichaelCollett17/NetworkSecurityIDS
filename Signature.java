@@ -32,9 +32,12 @@ public class Signature{
   private boolean ipOptionBool = false;
   private byte[] ipOptCode;
   private boolean fragBitBool = false;
-  private boolean df;//D or !D dont fragment
-  private boolean r;//R or !R reserved bit
-  private boolean mf; //M or !M more frags
+  private boolean df = false;//D or !D dont fragment
+  private boolean r = false;//R or !R reserved bit
+  private boolean mf = false; //M or !M more frags
+  private boolean notdf = false;//D or !D dont fragment
+  private boolean notr = false;//R or !R reserved bit
+  private boolean notmf = false; //M or !M more frags
   private boolean dSizeBool = false;
   private int dSize = -1;
   private boolean flagBool = false;
@@ -63,23 +66,34 @@ public class Signature{
   }
 
   public void compare(IPPacket ip){
-
+    boolean ruleMatch = false;
+    testIP(ip);
+    testCommon(ip.getip_packet());
   }
 
   public void compare(ARP arp){
-
+    boolean ruleMatch = false;
+    testCommon(arp.getArpPacket());
   }
 
   public void compare(TCP tcp){
-
+    boolean ruleMatch = false;
+    testTCP(tcp);
+    testIP(tcp);
+    testCommon(tcp.getTcpPacket());
   }
 
   public void compare(UDP udp){
-
+    boolean ruleMatch = false;
+    testIP(udp);
+    testCommon(udp.getUDPPacket());
   }
 
   public void compare(ICMP icmp){
-
+    boolean ruleMatch = false;
+    testICMP(icmp);
+    testIP(icmp);
+    testCommon(icmp.getICMPPacket());
   }
 
   //use many methods as most code is the same
@@ -218,15 +232,15 @@ public class Signature{
         case "fragbits":
           fragBitBool = true;
           if(option[1].toLowerCase().contains("!d"))
-            df = false;
+            notdf = true;
           else if(option[1].toLowerCase().contains("d"))
             df = true;
           if(option[1].toLowerCase().contains("!m"))
-            mf = false;
+            notmf = true;
           else if(option[1].toLowerCase().contains("m"))
             mf = true;
           if(option[1].toLowerCase().contains("!r"))
-            r = false;
+            notr = true;
           else if(option[1].toLowerCase().contains("r"))
             r = true;
           break;
@@ -286,6 +300,42 @@ public class Signature{
           break;
       }
     }
+  }
+  //test for ttl, tos, id, fragoffset, fragbits, sameIP,
+  private boolean testIP(IPPacket ip){
+    if(ttlBool && (ip.getIp_TTL() != ttl))
+      return false;
+    if(tosBool && (ip.getIp_TOS() != tos))
+      return false;
+    if(idBool && (ip.getIp_identification() != id))
+      return false;
+    if(fragOffBool && (ip.getIp_fragmentOffset() != fragOffset))
+      return false;
+    if(fragBitBool){
+      boolean ipdf = ip.isIp_DFflag();
+      boolean ipmf = ip.isIp_MFflag();
+      if(!((df && ipdf) | (notdf && !ipdf) | (mf && ipmf) | (notmf && !ipmf) | (r | notr))){
+        return false;
+      }
+    }
+    if(sameIP && !(ip.getIp_destAddress().getHostAddress().equals(ip.getIp_sourceAddress().getHostAddress())))
+      return false;
+    return true;
+  }
+
+  //test for flags, seq, and ack
+  private boolean testTCP(TCP tcp){
+    return true;
+  }
+
+  //test for itype and icode
+  private boolean testICMP(ICMP icmp){
+    return true;
+  }
+
+  //dsize, content, logto, msg
+  private boolean testCommon(byte[] packet){
+    return true;
   }
 
   public long ipToLong(String ipAddress) {
